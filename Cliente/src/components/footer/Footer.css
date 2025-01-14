@@ -1,0 +1,43 @@
+.foot-container {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    background-color: rgb(218,214,208);
+}
+
+.foot-inner-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.foot-ico {
+    margin-left: 30%;
+}
+
+.foot-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.foot-social-ico {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 1vw;
+}
+.foot-link a {
+    font-size: 1.75rem;
+}
+.foot-social-ico img {
+    max-height: 50px;
+    margin-left: 0.15vw;
+    margin-right: 0.15vw;
+    cursor: pointer;
+}
+.foot-link a:link,a:visited,a:hover,a:active {
+    color: rgb(229, 32, 114);
+    text-decoration: none;
+    cursor: default;
+  }

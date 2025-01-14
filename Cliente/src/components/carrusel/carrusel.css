@@ -1,0 +1,29 @@
+.carrusel-container {
+    display: flex;
+}
+
+.carrussel-buttons{
+    justify-content: space-between;
+    z-index: 2;
+    bottom: 25vw;
+}
+
+.carrusel-imgs{
+    position: relative;
+    z-index: -1;
+}
+
+.carrussel-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bt1 button, .bt2 button{
+    max-height: fit-content;
+    padding: 0.6em 0.8em;
+    background-color: #333;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid #888;
+    cursor: pointer;
+}

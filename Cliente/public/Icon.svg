@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="svg2" viewBox="183.486 248.817 162.22 154.294" xmlns="http://www.w3.org/2000/svg">
+  <desc>Source: openclipart.org/detail/209545</desc>
+  <defs>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="264.803" cy="325.27" r="79.927" id="gradient-0">
+      <stop offset="0" style="stop-color: rgb(89.02% 0% 39.608%)"/>
+      <stop offset="1" style="stop-color: rgb(58.557% 0% 23.672%)"/>
+    </radialGradient>
+  </defs>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: url(&quot;#gradient-0&quot;);" cx="264.803" cy="325.27" rx="79.927" ry="73.672"/>
+  <text style="fill: rgb(51, 51, 51); font-family: &quot;Harlow Solid&quot;; font-size: 47px; font-style: italic; letter-spacing: 5.1px; white-space: pre;" x="195.996" y="335">Alma</text>
+</svg>
