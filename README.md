@@ -22,20 +22,28 @@ A professional and modern landing page created for promotional purposes and prog
  - Visual Studio Code or any other that support front-end code
 
 #### Installation
+
+ - First clone this repository to your local machine:
  ``` git
-#First clone this repository to your local machine:
 git clone https://github.com/JuanHernandezMorani/AlmaLandingPage
+```
+ - Second navigate to the project directory
 
-#Second navigate to the project directory
+``` git
 cd AlmaLandingPage
+```
+   
+ - Third install required depencencies
 
-#Then install required depencencies
+``` git
 npm install
-
-#Finally just run the project
-npm start
 ```
 
+ - Finally run the project
+
+``` git
+npm start
+```
 
 ## Built with
  - React
