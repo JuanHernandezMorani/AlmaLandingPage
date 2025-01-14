@@ -1,29 +1,70 @@
 .carrusel-container {
     display: flex;
-}
-
-.carrussel-buttons{
-    justify-content: space-between;
-    z-index: 2;
-    bottom: 25vw;
-}
-
-.carrusel-imgs{
+    align-items: center;
     position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carrusel-imgs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: -1;
 }
 
-.carrussel-buttons{
+.carrussel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    z-index: 2;
+    transform: translateY(-50%);
 }
 
-.bt1 button, .bt2 button{
-    max-height: fit-content;
-    padding: 0.6em 0.8em;
-    background-color: #333;
+.bt1 button, .bt2 button {
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    border-radius: 20px;
-    border: 1px solid #888;
+    padding: 1em 1.5em;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5em;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bt1 button:hover, .bt2 button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 3;
+}
+
+.nav-dot {
+    width: 40px;
+    height: 10px;
+    background-color: rgba(200, 200, 200, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-dot.active {
+    background-color: rgba(100, 100, 100, 0.8);
+}
+
+.nav-dot:hover {
+    background-color: rgba(150, 150, 150, 0.8);
 }

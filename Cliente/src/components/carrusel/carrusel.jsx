@@ -22,7 +22,7 @@ function selectImage(imageID){
     }
 }
 
-export default function Carrusel({ onImageChange }) {
+export default function Carrusel() {
     const [current, setCurrent] = useState(1);
     const { setImageID } = useContext(ImageContext);
 
@@ -34,7 +34,7 @@ export default function Carrusel({ onImageChange }) {
                 setImageID(1);
             }, 1);
         }
-    }, [current, onImageChange]);
+    }, [current]);
 
     function previousImage() {
         current === 1 ? setCurrent(7) : setCurrent(current - 1);
@@ -44,21 +44,33 @@ export default function Carrusel({ onImageChange }) {
         current === 7 ? setCurrent(1) : setCurrent(current + 1);
     }
 
+    function selectImageByNavigation(index) {
+        setCurrent(index);
+    }
+
     return (
         <div className="carrusel-container">
             <div className="carrussel-buttons">
                 <div className="bt1">
                     <button onClick={() => previousImage()}>{'<'}</button>
                 </div>
-            </div>
-            <div className="carrusel-imgs">
-                <img src={selectImage(current)} alt="test" width="100%" />
-            </div>
-            <div className="carrussel-buttons">
                 <div className="bt2">
                     <button onClick={() => nextImage()}>{'>'}</button>
                 </div>
             </div>
+            <div className="carrusel-imgs">
+                <img src={selectImage(current)} alt="Carrusel" />
+            </div>
+            <div className="navigation">
+                {Array.from({ length: 7 }, (_, i) => (
+                    <div
+                        key={i}
+                        className={`nav-dot ${current === i + 1 ? 'active' : ''}`}
+                        onClick={() => selectImageByNavigation(i + 1)}
+                    ></div>
+                ))}
+            </div>
         </div>
     );
 }
+
