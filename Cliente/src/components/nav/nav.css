@@ -19,9 +19,10 @@
     max-height: 50px;
 }
 
-.inner-container ul{
+.nav-list{
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
+    padding: 0;
     list-style: none;
 }
 

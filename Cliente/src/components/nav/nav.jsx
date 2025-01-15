@@ -46,7 +46,7 @@ export default function Navbar() {
                 <a className="navbar-brand" href="/">
                     <img src={selectB()} alt="Almabtl_Icon" />
                 </a>
-                <ul>
+                <ul className="nav-list"> 
                     <li className="nav-item">
                         <a className={selectA()} href="#agency">
                             Agencia
