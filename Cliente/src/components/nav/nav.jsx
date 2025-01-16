@@ -18,7 +18,7 @@ export default function Navbar() {
     const { imageID } = useContext(ImageContext);
 
     function check(){
-        return (imageID > 1 && imageID < 6) || imageID === 7;
+        return imageID > 1;
     }
 
     function selectA(){

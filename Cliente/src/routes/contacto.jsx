@@ -6,8 +6,6 @@ export default function Contacto(){
 return (
         <div className="contact-container">
             <img src={link} alt="contact-image"/>
-            <p>Contacto</p>
-            <img src={link} alt="contact-image"/>
         </div>
     );
 }

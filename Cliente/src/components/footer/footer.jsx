@@ -5,7 +5,7 @@ import facebook from '../../imgs/ico/facebook.png'
 import instagram from '../../imgs/ico/instagram.png'
 import footlogo from '../../imgs/log/Alma Footer.png';
 
-export default function (){
+export default function Footer(){
     return (
         <div className='foot-container'>
             <div className='foot-inner-container'>

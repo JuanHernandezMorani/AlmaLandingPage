@@ -62,9 +62,221 @@
 }
 
 .nav-dot.active {
-    background-color: rgba(100, 100, 100, 0.8);
+    background-color: rgba(43, 43, 43, 0.8);
 }
 
 .nav-dot:hover {
-    background-color: rgba(150, 150, 150, 0.8);
+    background-color: rgba(133, 125, 125, 0.808);
+}
+
+.carrusel-main-img {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 100%;
+    margin-left: 50vw;
+    margin-top: 29vh;
+    z-index: 4;
+}
+
+.carrusel-main-img h2 {
+   text-align: end;
+   font-size: 3.5rem;
+   white-space: nowrap;
+   font-weight: normal;
+   margin: 0;
+}
+
+.carrusel-main-img h3 {
+    text-align: end;
+    color: white;
+    white-space: pre-wrap;
+    font-size: 3rem;
+    margin-left: 1vw;
+    margin-top: 0;
+    margin-bottom: 25vh;
+}
+
+.bold-word {
+    font-weight: bold;
+}
+
+.carrusel-component-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 60vw;
+}
+
+.carrusel-component-2 h1 {
+    display: flex;
+    color: white;
+    line-height: 1;
+    font-size: 5.2rem;
+    white-space: pre-wrap;
+    text-align: end;
+    z-index: 4;
+}
+
+.carrusel-component-2 button {
+    border-style: outset;
+    border-color: white;
+    width: 275px;
+    height: 50px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.carrusel-component-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 68vw;
+    margin-top: 43vh;
+}
+
+.carrusel-component-3 button {
+    border-style: outset;
+    border-color: white;
+    width: 275px;
+    height: 50px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.carrusel-component-3 h1 {
+    display: flex;
+    color: white;
+    line-height: 1;
+    font-size: 5.2rem;
+    white-space: pre-wrap;
+    text-align: end;
+    z-index: 4;
+}
+
+.carrusel-component-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 77.5vw;
+    margin-top: 45vh;
+}
+
+.carrusel-component-4 button {
+    border-style: outset;
+    border-color: white;
+    width: 275px;
+    height: 50px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.carrusel-component-4 h1 {
+    display: flex;
+    color: white;
+    line-height: 1;
+    font-size: 5.2rem;
+    white-space: pre-wrap;
+    text-align: end;
+    z-index: 4;
+}
+
+.carrusel-component-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 32.5vw;
+    margin-top: 40vh;
+}
+
+.carrusel-component-5 h1 {
+    display: flex;
+    color: white;
+    line-height: 1;
+    font-size: 5.2rem;
+    white-space: pre-wrap;
+    text-align: end;
+    z-index: 4;
+}
+
+.carrusel-component-5 button {
+    border-style: outset;
+    border-color: white;
+    width: 275px;
+    height: 50px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.carrusel-component-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 60vw;
+    margin-top: 43vh;
+
+}
+
+.carrusel-component-6 h1 {
+    display: flex;
+    color: white;
+    line-height: 1;
+    font-size: 5.2rem;
+    white-space: pre-wrap;
+    text-align: end;
+    z-index: 4;
+}
+
+.carrusel-component-6 button {
+    border-style: outset;
+    border-color: white;
+    width: 275px;
+    height: 50px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.carrusel-component-7 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 60vw;
+    margin-top: 45vh;
+}
+
+.carrusel-component-7 h1 {
+    display: flex;
+    color: white;
+    line-height: 1;
+    font-size: 5.2rem;
+    white-space: pre-wrap;
+    text-align: end;
+    z-index: 4;
+}
+
+.carrusel-component-7 button {
+    border-style: outset;
+    border-color: white;
+    width: 275px;
+    height: 50px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    z-index: 4;
 }

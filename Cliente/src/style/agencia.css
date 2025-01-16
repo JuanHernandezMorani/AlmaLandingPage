@@ -1,5 +1,79 @@
 .agency-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.agency-title {
+    display: flex;
+    font-size: 2.5rem;
+    align-items: start;
+    margin-left: 7.5vw;
+}
+
+.agency-container h2{
+    display: flex;
+    font-size: 1.5rem;
+    align-items: start;
+    margin-left: 7.5vw;
+
+}
+
+.agency-middle {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    justify-content: space-between;
+}
+
+.agency-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 7.5vw;
+    max-width: 500px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.agency-inner-imgs {
+    position: relative;
+    top: -12vh;
+    left: -25vh;
+}
+
+.agency-description {
+    font-size: 1.35rem;
+    margin-bottom: 5%;
+}
+
+
+.agency-text {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.agency-text p {
+    font-size: 1.15rem;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.separator {
+    margin-top: 5%;
+}
+
+.agency-end {
+    position: relative;
+    left: 15%;
+    font-size: 4rem;
+    max-width: 1300px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    margin: 0;
+}
+
+.separator img {
     width: 100%;
-    height: 100%;
-    background-color: aqua;
+    margin: 0;
 }
