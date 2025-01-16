@@ -64,7 +64,7 @@ export default function Carrusel() {
         if(current !== 1 && current <= 7){
             return (
                 <div className={styleSelector()}>
-                    <h1 className="project_h1" dangerouslySetInnerHTML={{ __html: selectName() }} />
+                    <h1 className="project_h1"><HighlightedText text={selectName()} /></h1>
                     <button className="project_button" onClick={()=>{check(current)}}>VER PROYECTO</button>
                 </div>
             );
@@ -80,7 +80,7 @@ export default function Carrusel() {
     }
 
     function HighlightedText({ text }) {
-        const wordsToBold = ["SERVICIO", "PROFESIONALES"];
+        const wordsToBold = ["SERVICIO", "PROFESIONALES","CORPORATIVOS","DAY","CONGRESOS","FILMMAKERS","REGALOS","EMPRESARIALES","LOGISTICA"];
         const formattedText = text.split(/(\b\S+\b)/).map((word, index) =>
             wordsToBold.includes(word.trim()) ? (
                 <span key={index} className="bold-word">{word}</span>
@@ -142,4 +142,3 @@ export default function Carrusel() {
         </div>
     );
 }
-

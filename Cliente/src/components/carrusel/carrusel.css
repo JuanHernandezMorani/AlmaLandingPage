@@ -23,7 +23,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    z-index: 2;
+    z-index: 99;
     transform: translateY(-50%);
 }
 
@@ -36,10 +36,12 @@
     font-size: 1.5em;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    z-index: 99;
 }
 
 .bt1 button:hover, .bt2 button:hover {
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99;
 }
 
 .navigation {
@@ -49,7 +51,7 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    z-index: 3;
+    z-index: 99;
 }
 
 .nav-dot {
@@ -105,6 +107,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-top: 40vh;
     margin-left: 60vw;
 }
 
@@ -116,6 +119,9 @@
     white-space: pre-wrap;
     text-align: end;
     z-index: 4;
+    cursor: default;
+    margin: 0;
+    font-weight: normal;
 }
 
 .carrusel-component-2 button {
@@ -135,7 +141,7 @@
     flex-direction: column;
     align-items: flex-end;
     margin-left: 68vw;
-    margin-top: 43vh;
+    margin-top: 44vh;
 }
 
 .carrusel-component-3 button {
@@ -154,10 +160,13 @@
     display: flex;
     color: white;
     line-height: 1;
-    font-size: 5.2rem;
+    font-size: 4.75rem;
     white-space: pre-wrap;
     text-align: end;
     z-index: 4;
+    cursor: default;
+    margin: 0;
+    font-weight: normal;
 }
 
 .carrusel-component-4 {
@@ -188,6 +197,9 @@
     white-space: pre-wrap;
     text-align: end;
     z-index: 4;
+    cursor: default;
+    margin: 0;
+    font-weight: normal;
 }
 
 .carrusel-component-5 {
@@ -206,6 +218,9 @@
     white-space: pre-wrap;
     text-align: end;
     z-index: 4;
+    cursor: default;
+    margin: 0;
+    font-weight: normal;
 }
 
 .carrusel-component-5 button {
@@ -237,6 +252,9 @@
     white-space: pre-wrap;
     text-align: end;
     z-index: 4;
+    cursor: default;
+    margin: 0;
+    font-weight: normal;
 }
 
 .carrusel-component-6 button {
@@ -255,7 +273,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-left: 60vw;
+    margin-left: 64.5vw;
     margin-top: 45vh;
 }
 
@@ -263,10 +281,13 @@
     display: flex;
     color: white;
     line-height: 1;
-    font-size: 5.2rem;
+    font-size: 5rem;
     white-space: pre-wrap;
     text-align: end;
     z-index: 4;
+    cursor: default;
+    margin: 0;
+    font-weight: normal;
 }
 
 .carrusel-component-7 button {

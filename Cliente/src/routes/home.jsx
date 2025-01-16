@@ -5,13 +5,11 @@ import Agencia from './agencia.jsx';
 import Clientes from './clientes.jsx';
 import Contacto from './contacto.jsx'; 
 import '../style/home.css';
-import { Divider } from '@mui/material';
 
 export default function Home(){
     return (
         <div className='home-container'>
          <Carrusel />
-         <Divider variant='middle'/>
             <div className='sections-list'>
                 <section id="agency"> <Agencia /> </section>
                 <section id="services"> <Servicios /> </section>

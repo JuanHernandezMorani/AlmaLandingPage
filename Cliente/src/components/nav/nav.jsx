@@ -1,18 +1,15 @@
 import {React, useContext} from 'react';
 import { ImageContext } from '../../context/ImageContext';
-
 import './nav.css';
-
 import logo from '../../imgs/log/ALMA en negro.png';
 import logo2 from '../../imgs/log/ALMA en blanco.png';
-
 import linkedin from '../../imgs/ico/linkedin.png';
 import facebook from '../../imgs/ico/facebook.png';
 import instagram from '../../imgs/ico/instagram.png';
-
 import linkedinW from '../../imgs/ico/white-linkedin.png';
 import facebookW from '../../imgs/ico/white-fb.png';
 import instagramW from '../../imgs/ico/white-instagram.png';
+import { Divider } from '@mui/material';
 
 export default function Navbar() {
     const { imageID } = useContext(ImageContext);
@@ -38,6 +35,9 @@ export default function Navbar() {
     }   
     function selectF(){
         return check() ? instagramW : instagram ;
+    }
+    function selectDivider(){
+        return check() ? <Divider variant="middle" sx={{border:1, borderColor: 'white', width:"99%", marginTop: 1}} /> : <Divider variant="middle" sx={{border:1, borderColor: 'darkgrey', width:"99%", marginTop: 1}} />
     }
 
     return (
@@ -98,6 +98,7 @@ export default function Navbar() {
                     <p className={selectC()}>@Almabtl</p>
                 </div>
             </div>
+            {selectDivider()}
         </div>
     );
 }
