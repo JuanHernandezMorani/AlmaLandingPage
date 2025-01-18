@@ -77,3 +77,146 @@
     width: 100%;
     margin: 0;
 }
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .agency-title {
+        font-size: 2rem;
+        margin-left: 5vw;
+    }
+
+    .agency-container h2 {
+        font-size: 1.25rem;
+        margin-left: 5vw;
+    }
+
+    .agency-middle {
+        margin-top: 2%;
+    }
+
+    .agency-inner {
+        margin-left: 5vw;
+        max-width: 450px;
+    }
+
+    .agency-inner-imgs {
+        top: -10vh;
+        left: -20vh;
+    }
+
+    .agency-description {
+        font-size: 1.2rem;
+    }
+
+    .agency-end {
+        font-size: 3.5rem;
+        left: 10%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .agency-container {
+        padding: 0 5%;
+    }
+
+    .agency-title {
+        font-size: 1.8rem;
+        margin-left: 0;
+    }
+
+    .agency-container h2 {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+
+    .agency-middle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .agency-inner {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .agency-inner-imgs {
+        top: -8vh;
+        left: 0;
+        text-align: center;
+    }
+
+    .agency-description {
+        font-size: 1rem;
+        margin-bottom: 3%;
+    }
+
+    .agency-text p {
+        font-size: 1rem;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .agency-end {
+        font-size: 3rem;
+        left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .agency-container {
+        padding: 0 2%;
+    }
+
+    .agency-title {
+        font-size: 1.5rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .agency-container h2 {
+        font-size: 1rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .agency-middle {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+    }
+
+    .agency-inner {
+        margin-left: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .agency-inner-imgs {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    .agency-description {
+        font-size: 0.9rem;
+        margin-bottom: 2%;
+    }
+
+    .agency-text p {
+        font-size: 0.85rem;
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+    }
+
+    .agency-end {
+        font-size: 2.5rem;
+        left: 0;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .separator img {
+        margin-top: 2%;
+    }
+}

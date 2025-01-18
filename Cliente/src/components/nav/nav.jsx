@@ -1,8 +1,8 @@
-import {React, useContext} from 'react';
+import {React, useState, useContext} from 'react';
 import { ImageContext } from '../../context/ImageContext';
 import '../../style/nav.css';
-import logo from '../../imgs/log/ALMA en negro.png';
-import logo2 from '../../imgs/log/ALMA en blanco.png';
+import logo from '../../imgs/log/ALMA_en_negro.png';
+import logo2 from '../../imgs/log/ALMA_en_blanco.png';
 import linkedin from '../../imgs/ico/linkedin.png';
 import facebook from '../../imgs/ico/facebook.png';
 import instagram from '../../imgs/ico/instagram.png';
@@ -13,31 +13,48 @@ import { Divider } from '@mui/material';
 
 export default function Navbar() {
     const { imageID } = useContext(ImageContext);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-    function check(){
+    function check() {
         return imageID > 1;
     }
 
-    function selectA(){
-        return check() ? "nav-link-white" : "nav-link" ;
+    function selectA() {
+        return check() ? "nav-link-white" : "nav-link";
     }
-   function selectB(){
-        return check() ? logo2 : logo ;
-    }   
-    function selectC(){
-        return check() ? "navbar-text-white" : "navbar-text" ;
-    }   
-    function selectD(){
-        return check() ? linkedinW : linkedin ;
-    }   
-    function selectE(){
-        return check() ? facebookW : facebook ;
-    }   
-    function selectF(){
-        return check() ? instagramW : instagram ;
+
+    function selectB() {
+        return check() ? logo2 : logo;
     }
-    function selectDivider(){
-        return check() ? <Divider variant="middle" sx={{border:1, borderColor: 'white', width:"99%", marginTop: 1}} /> : <Divider variant="middle" sx={{border:1, borderColor: 'darkgrey', width:"99%", marginTop: 1}} />
+
+    function selectC() {
+        return check() ? "navbar-text-white" : "navbar-text";
+    }
+
+    function selectD() {
+        return check() ? linkedinW : linkedin;
+    }
+
+    function selectE() {
+        return check() ? facebookW : facebook;
+    }
+
+    function selectF() {
+        return check() ? instagramW : instagram;
+    }
+
+    function selectDivider() {
+        return check() ? (
+            <Divider
+                variant="middle"
+                sx={{ border: 1, borderColor: "white", width: "99%", marginTop: 1 }}
+            />
+        ) : (
+            <Divider
+                variant="middle"
+                sx={{ border: 1, borderColor: "darkgrey", width: "99%", marginTop: 1 }}
+            />
+        );
     }
 
     return (
@@ -46,7 +63,16 @@ export default function Navbar() {
                 <a className="navbar-brand" href="/">
                     <img src={selectB()} alt="Almabtl_Icon" />
                 </a>
-                <ul className="nav-list"> 
+                <button
+                    className="menu-toggle"
+                    aria-label="Toggle navigation"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
                     <li className="nav-item">
                         <a className={selectA()} href="#agency">
                             Agencia

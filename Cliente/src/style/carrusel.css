@@ -301,3 +301,111 @@
     cursor: pointer;
     z-index: 4;
 }
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/* Media query para pantallas entre 1024px y 1440px */
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .carrusel-main-img {
+        margin-left: 30vw;
+        margin-top: 20vh;
+    }
+    .carrusel-component-2 {
+        margin-left: 40vw;
+        margin-top: 30vh;
+    }
+    .carrusel-component-3 {
+        margin-left: 45vw;
+        margin-top: 35vh;
+    }
+    .carrusel-component-4 {
+        margin-left: 60vw;
+        margin-top: 35vh;
+    }
+    .carrusel-component-5 {
+        margin-left: 20vw;
+        margin-top: 30vh;
+    }
+    .carrusel-component-6 {
+        margin-left: 40vw;
+        margin-top: 33vh;
+    }
+    .carrusel-component-7 {
+        margin-left: 50vw;
+        margin-top: 35vh;
+    }
+}
+
+/* Media query para pantallas entre 768px y 1024px */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .carrusel-main-img h2 {
+        font-size: 2.5rem;
+    }
+    .carrusel-main-img h3 {
+        font-size: 2rem;
+    }
+    .carrusel-main-img {
+        margin-left: 20vw;
+        margin-top: 15vh;
+    }
+    .carrusel-component-2 h1,
+    .carrusel-component-3 h1,
+    .carrusel-component-4 h1,
+    .carrusel-component-5 h1,
+    .carrusel-component-6 h1,
+    .carrusel-component-7 h1 {
+        font-size: 3rem;
+    }
+    .carrusel-component-2 button,
+    .carrusel-component-3 button,
+    .carrusel-component-4 button,
+    .carrusel-component-5 button,
+    .carrusel-component-6 button,
+    .carrusel-component-7 button {
+        width: 200px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Media query para pantallas menores a 768px */
+@media (max-width: 768px) {
+    .carrusel-main-img h2 {
+        font-size: 2rem;
+    }
+    .carrusel-main-img h3 {
+        font-size: 1.5rem;
+    }
+    .carrusel-main-img {
+        margin-left: 10vw;
+        margin-top: 10vh;
+    }
+    .carrusel-component-2,
+    .carrusel-component-3,
+    .carrusel-component-4,
+    .carrusel-component-5,
+    .carrusel-component-6,
+    .carrusel-component-7 {
+        margin-left: 10vw;
+        margin-top: 20vh;
+        align-items: center;
+    }
+    .carrusel-component-2 h1,
+    .carrusel-component-3 h1,
+    .carrusel-component-4 h1,
+    .carrusel-component-5 h1,
+    .carrusel-component-6 h1,
+    .carrusel-component-7 h1 {
+        font-size: 2.5rem;
+    }
+    .carrusel-component-2 button,
+    .carrusel-component-3 button,
+    .carrusel-component-4 button,
+    .carrusel-component-5 button,
+    .carrusel-component-6 button,
+    .carrusel-component-7 button {
+        width: 150px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}

@@ -1,6 +1,7 @@
 import "../../style/carrusel.css";
 import { React, useContext, useState, useEffect } from 'react';
-import { ImageContext } from '../../context/ImageContext.js'; 
+import { ImageContext } from '../../context/ImageContext.js';
+import { PortContext } from '../../context/PortContext.js'; 
 import portada from "../../imgs/port/PORTADA_PRINCIPAL.jpg";
 import eventos from "../../imgs/port/EVENTOS_CORPORATIVOS.jpg";
 import mkt from "../../imgs/port/TRADE_MKT.jpg";
@@ -8,7 +9,6 @@ import ferias from "../../imgs/port/FERIAS_&_CONGRESOS.jpg";
 import family from "../../imgs/port/FAMILY_DAY.jpg";
 import merchan from "../../imgs/port/MERCHAN.jpg";
 import film from "../../imgs/port/FOTO_Y_FILMMAKER.jpg";
-import Sweet from "sweetalert2";
 
 function selectImage(imageID){
     switch(imageID){
@@ -28,10 +28,12 @@ export default function Carrusel() {
 
     useEffect(() => {
         setImageID(current);
+        check(current);
         if (current > 7 || current < 1) {
             setTimeout(() => {
                 setCurrent(1);
                 setImageID(1);
+                check(1);
             }, 1);
         }
     }, [current,setImageID]);
@@ -49,35 +51,70 @@ export default function Carrusel() {
     }
 
     function check(componentID){
-        return Sweet.fire({
-            title: 'Component ' + componentID + ', say: its works!',
-            text: 'Lets continue',
-            icon: 'success',
-            confirmButtonText: 'Cool'
-        })
+        switch(componentID){
+            case 2: {
+                return 2;
+            }
+            case 3: {
+                return 4;
+            }
+            case 4: {
+                return 6;
+            }
+            case 5: {
+                return 5;
+            }
+            case 6: {
+                return 7;
+            }
+            case 7: {
+                return 3;
+            }
+            default: {
+                return 1;
+            }
+        }
     }
 
-    function selectComponents(){
+    function SelectComponents() {
         let a = "somos\nprofesionales";
         let b = "al SERVICIO de PROFESIONALES";
-
-        if(current !== 1 && current <= 7){
+    
+        const { setPortID } = useContext(PortContext);
+    
+        function handleButtonClick() {
+            let id = check(current);
+            setPortID(id);
+        }
+    
+        if (current !== 1 && current <= 7) {
             return (
                 <div className={styleSelector()}>
-                    <h1 className="project_h1"><HighlightedText text={selectName()} /></h1>
-                    <button className="project_button" onClick={()=>{check(current)}}>VER PROYECTO</button>
+                    <h1 className="project_h1">
+                        <HighlightedText text={selectName()} />
+                    </h1>
+                    <a href="#portfolios">
+                        <button
+                            className="project_button"
+                            onClick={() => handleButtonClick()}
+                        >
+                            VER PROYECTO
+                        </button>
+                    </a>
                 </div>
             );
-        }
-        else{
+        } else {
             return (
                 <div className="carrusel-main-img">
                     <h3>{a}</h3>
-                    <h2><HighlightedText text={b} /></h2>
+                    <h2>
+                        <HighlightedText text={b} />
+                    </h2>
                 </div>
             );
         }
     }
+    
 
     function HighlightedText({ text }) {
         const wordsToBold = ["SERVICIO", "PROFESIONALES","CORPORATIVOS","DAY","CONGRESOS","FILMMAKERS","REGALOS","EMPRESARIALES","LOGISTICA"];
@@ -128,7 +165,7 @@ export default function Carrusel() {
             </div>
             <div className="carrusel-imgs">
                 <img src={selectImage(current)} alt="Carrusel" />
-                {selectComponents()}
+                {SelectComponents()}
             </div>
             <div className="navigation">
                 {Array.from({ length: 7 }, (_, i) => (

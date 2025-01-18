@@ -70,3 +70,91 @@
     line-height: 1.5;
     word-wrap: break-word;
 }
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .services-title {
+        font-size: 2rem;
+        margin-left: 5vw;
+    }
+
+    .services-container h2 {
+        font-size: 1.3rem;
+        margin-left: 5vw;
+    }
+
+    .services-description {
+        max-width: 500px;
+    }
+
+    .services-container p {
+        font-size: 1rem;
+        margin-left: 5vw;
+    }
+
+    .services-components {
+        margin-left: 5vw;
+    }
+
+    .component-container {
+        padding: 3vh;
+    }
+
+    .component {
+        padding: 3vh;
+    }
+
+    .component img {
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    .component h4 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-title {
+        font-size: 1.75rem;
+        margin-left: 5vw;
+    }
+
+    .services-container h2 {
+        font-size: 1.2rem;
+        margin-left: 5vw;
+    }
+
+    .services-description {
+        max-width: 100%;
+        font-size: 1rem;
+        margin-left: 5vw;
+    }
+
+    .services-container p {
+        font-size: 1rem;
+        margin-left: 5vw;
+        margin-bottom: 5%;
+    }
+
+    .services-components {
+        margin-left: 5vw;
+    }
+
+    .component-container {
+        flex-direction: column;
+        padding: 2vh;
+    }
+
+    .component {
+        padding: 3vh;
+    }
+
+    .component img {
+        max-width: 100%;
+        max-height: 250px;
+    }
+
+    .component h4 {
+        font-size: 1rem;
+    }
+}

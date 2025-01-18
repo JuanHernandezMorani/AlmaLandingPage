@@ -54,7 +54,8 @@ export default function Clientes(){
                 </ul>
             </div>
             <div className="clients-sc">
-                    <img src={rhbg} alt="rhbg"/>
+                    <img src={rhbg} alt="rhbg" className="clients-sc-bg"/>
+                    <p className="clients-sc-p"> ¿ESTÁS LISTO PARA EMBARCARTE CON NOSOTROS?</p>
                     <div className="partners-inner">
                         <h1 className="clientes-h1">PARTNERS</h1>
                         <ul className="partners-list">
@@ -66,9 +67,9 @@ export default function Clientes(){
                             <li><img src={boomstudio} alt='boomstudio' className="partners-list-img-6"/></li>
                             <li><img src={sapyd} alt='sapyd' className="partners-list-img-7"/></li>
                         </ul>
+                        <h1 className="clientes-h1">CONTACTO</h1>
                     </div>
             </div>
-            <h1 className="clientes-h1">CONTACTO</h1>
         </div>
     );
 }

@@ -81,3 +81,159 @@
     margin-right: 0.15vw;
     cursor: pointer;
 }
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover span {
+    background-color: #666;
+}
+
+.nav-list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    transition: transform 0.3s ease;
+}
+
+.nav-list.open {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.nav-list li {
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .inner-container {
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+    }
+
+    .navbar-brand img {
+        max-height: 45px;
+    }
+
+    .social img {
+        max-height: 10px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .container {
+        position: relative;
+    }
+
+    .inner-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+
+    .navbar-brand {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    .nav-item {
+        padding: 0.5rem 1rem;
+        width: 100%;
+    }
+
+    .nav-item .nav-link {
+        font-size: 1rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        z-index: 2;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #000;
+        margin: 5px 0;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu-toggle:hover span {
+        background-color: #666;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked ~ .nav-list {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        transform: translateY(-100%);
+    }
+
+    .nav-list.open {
+        display: flex;
+        transform: translateY(0);
+    }
+}

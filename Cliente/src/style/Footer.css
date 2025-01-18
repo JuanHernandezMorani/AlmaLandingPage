@@ -41,3 +41,50 @@
     text-decoration: none;
     cursor: default;
   }
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .foot-ico {
+        margin-left: 20%;
+    }
+
+    .foot-social-ico img {
+        max-height: 40px;
+    }
+
+    .foot-link a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .foot-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foot-inner-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foot-ico {
+        margin-left: 0;
+        margin-bottom: 2vh;
+    }
+
+    .foot-social-ico {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 3vh;
+    }
+
+    .foot-social-ico img {
+        max-height: 30px;
+        margin-bottom: 1vh;
+    }
+
+    .foot-link a {
+        font-size: 1.25rem;
+    }
+}

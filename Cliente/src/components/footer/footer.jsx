@@ -3,7 +3,7 @@ import '../../style/Footer.css';
 import linkedin from '../../imgs/ico/linkedin.png'
 import facebook from '../../imgs/ico/facebook.png'
 import instagram from '../../imgs/ico/instagram.png'
-import footlogo from '../../imgs/log/Alma Footer.png';
+import footlogo from '../../imgs/log/Alma_Footer.png';
 
 export default function Footer(){
     return (
