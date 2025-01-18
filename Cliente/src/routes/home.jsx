@@ -13,8 +13,8 @@ export default function Home(){
             <div className='sections-list'>
                 <section id="agency"> <Agencia /> </section>
                 <section id="services"> <Servicios /> </section>
-                <section id="portfolios"> <Clientes /> </section>
                 <section id="clients"> <Portfolio /> </section>
+                <section id="portfolios"> <Clientes /> </section>
                 <section id="contact"> <Contacto /> </section>
             </div>
         </div>

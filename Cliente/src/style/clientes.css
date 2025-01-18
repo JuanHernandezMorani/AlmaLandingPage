@@ -1,5 +1,124 @@
 .clients-container{
     display: flex;
     flex-direction: column;
-    background-color: rgb(72, 255, 0);
+    align-items: flex-start;
+    margin-left: 10vw;
+}
+
+.clientes-h1 {
+    font-size: 3rem;
+}
+
+.clients-inner {
+    display: flex;
+    flex-direction: column;    
+    align-items: flex-start;
+}
+
+.clients-follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    right: 10vw;
+    background-color: rgb(245, 245, 245);
+    width: 99.2vw;
+}
+
+.clients-follow h2 {
+    font-size: 2rem;
+    max-width: fit-content;
+}
+
+.follow-imgs {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    margin-top: 2vh;
+    margin-bottom: 6vh;
+    list-style: none;
+}
+
+.follow-li-imgs-1 img {
+    position: relative;
+    max-width: 60px;
+    max-height: 60px;
+    right: 14vw;
+}
+
+.follow-li-imgs-2 img {
+    position: relative;
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.follow-li-imgs-3 img {
+    position: relative;
+    max-width: 60px;
+    max-height: 60px;
+    left: 14vw;
+}
+
+.clients-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-bottom: 3vh;
+    padding: 0;
+}
+
+.clients-list-img-1{
+    margin: 0;
+    max-width: 180px;
+    max-height: 140px;;
+}
+
+.clients-list-img-2,
+.clients-list-img-3,
+.clients-list-img-4,
+.clients-list-img-5,
+.clients-list-img-6{
+    margin-left: 5.5vw;
+    max-width: 180px;
+    max-height: 140px;
+}
+
+.partners-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10vw;
+}
+
+.partners-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.partners-list-img-1 {
+    margin: 0;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.partners-list-img-2,
+.partners-list-img-3,
+.partners-list-img-4,
+.partners-list-img-5,
+.partners-list-img-6,
+.partners-list-img-7 {
+    margin-left: 2vw;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.clients-sc {
+    
+}
+
+.clients-sc img {
+    object-fit: cover;
 }

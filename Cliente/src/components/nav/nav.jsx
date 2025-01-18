@@ -1,6 +1,6 @@
 import {React, useContext} from 'react';
 import { ImageContext } from '../../context/ImageContext';
-import './nav.css';
+import '../../style/nav.css';
 import logo from '../../imgs/log/ALMA en negro.png';
 import logo2 from '../../imgs/log/ALMA en blanco.png';
 import linkedin from '../../imgs/ico/linkedin.png';

@@ -8,7 +8,6 @@ return (
             <img src={link} alt="portfolios-image"/>
             <p>Portfolio</p>
             <img src={link} alt="portfolios-image"/>
-            <h2>Contacto</h2>
         </div>
     );
 }

@@ -1,4 +1,4 @@
-import "./carrusel.css";
+import "../../style/carrusel.css";
 import { React, useContext, useState, useEffect } from 'react';
 import { ImageContext } from '../../context/ImageContext.js'; 
 import portada from "../../imgs/port/PORTADA_PRINCIPAL.jpg";

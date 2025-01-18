@@ -1,0 +1,41 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .form-input,
+  .form-textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .form-textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .form-input:focus,
+  .form-textarea:focus {
+    border-color: #000;
+    outline: none;
+  }
+
+  .contact-form-button {
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    z-index: 4;
+  }
+  

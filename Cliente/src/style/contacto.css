@@ -1,5 +1,34 @@
 .contact-container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(255, 115, 0);
+    align-items: flex-start;
+    margin-top: 0;
+    margin-bottom: 5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.contact-h1 {
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.contact-h2 {
+    margin-top: 0;
+    margin-bottom: 8vh;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.contact-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-info {
+    margin-right: 50%;
 }
