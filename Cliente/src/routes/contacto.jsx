@@ -1,23 +1,70 @@
 import '../style/contacto.css';
 import Form from '../components/form/Form';
 import React, { useState } from "react";
+import Swal from 'sweetalert2';
 
 export default function Contacto() {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    nombre: "",
+    telefono: "",
+    email: "",
+    motivo: "",
+    mensaje: "",
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormSubmitted(true);
-    // sendMail();
+    sendMail(formData);
 
     setTimeout(() => {
-      e.target.reset();
+      setFormData({
+        nombre: "",
+        telefono: "",
+        email: "",
+        motivo: "",
+        mensaje: "",
+      });
       setFormSubmitted(false);
     }, 10000);
   };
 
-  function sendMail() {
-    
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  function sendMail(formData) {
+    fetch('http://localhost:8000/src/mailSender.php', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Correo enviado con éxito:', data);
+      Swal.fire({
+        icon: 'success',
+        title: 'Correo enviado exitosamente',
+        text: 'Hemos recibido tu mensaje y nos pondremos en contacto pronto.',
+        confirmButtonText: 'Aceptar',
+      });
+    })
+    .catch((error) => {
+      console.error('Error al enviar correo:', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error al enviar el correo',
+        text: 'Hubo un problema al enviar tu mensaje, por favor intenta nuevamente.',
+        confirmButtonText: 'Aceptar',
+      });
+    });
   }
 
   return (
@@ -50,31 +97,49 @@ export default function Contacto() {
             >
               <input
                 type="text"
+                name="nombre"
                 placeholder="* NOMBRE"
                 className="form-input"
                 required
+                value={formData.nombre}
+                onChange={handleChange}
               />
               <input
                 type="tel"
+                name="telefono"
                 placeholder="* TELÉFONO"
                 className="form-input"
                 required
+                value={formData.telefono}
+                onChange={handleChange}
               />
               <input
                 type="email"
+                name="email"
                 placeholder="* EMAIL"
                 className="form-input"
                 required
+                value={formData.email}
+                onChange={handleChange}
               />
-              <select className="form-input" required defaultValue="default">
+              <select
+                name="motivo"
+                className="form-input"
+                required
+                value={formData.motivo}
+                onChange={handleChange}
+              >
                 <option value="default" disabled>MOTIVO DE TU CONSULTA</option>
                 <option value="consulta1">Consulta 1</option>
                 <option value="consulta2">Consulta 2</option>
                 <option value="consulta3">Consulta 3</option>
               </select>
               <textarea
+                name="mensaje"
                 placeholder="MENSAJE"
                 className="form-textarea"
+                value={formData.mensaje}
+                onChange={handleChange}
               ></textarea>
               <button type="submit" className="contact-form-button">
                 ENVIAR
