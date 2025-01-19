@@ -129,7 +129,7 @@ export default function Contacto() {
                 value={formData.motivo}
                 onChange={handleChange}
               >
-                <option value="default" disabled>MOTIVO DE TU CONSULTA</option>
+                <option value="" disabled>MOTIVO DE TU CONSULTA</option>
                 <option value="consulta1">Consulta 1</option>
                 <option value="consulta2">Consulta 2</option>
                 <option value="consulta3">Consulta 3</option>

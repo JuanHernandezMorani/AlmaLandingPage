@@ -12,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 require __DIR__ . '/../vendor/autoload.php'; 
 
 use Dotenv\Dotenv;
-
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
@@ -41,23 +40,17 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
-    if (empty($data['email'])) {
-        echo json_encode(['success' => false, 'message' => 'Invalid email address']);
-        exit;
-    }
-
     $mail->setFrom($data['email'], $data['nombre']);
     $mail->addAddress($_ENV['MAIL_USERNAME']);
 
     $mail->isHTML(true);
     $mail->Subject = 'Nuevo mensaje desde el formulario de contacto';
-    $mail->Body    = 'Nombre: ' . htmlspecialchars($data['nombre']) . '<br>Email: ' . htmlspecialchars($data['email']) . '<br>Mensaje: ' . nl2br(htmlspecialchars($data['mensaje']));
+    $mail->Body    = 'Nombre: ' . htmlspecialchars($data['nombre']) . '<br>Email: ' . htmlspecialchars($data['email']) . '<br>Motivo: ' . nl2br(htmlspecialchars($data['motivo'])) . '<br>Mensaje: ' . nl2br(htmlspecialchars($data['mensaje']));
 
-    $mail->SMTPDebug = 2;
-    
     $mail->send();
     echo json_encode(['success' => true, 'message' => 'Correo enviado con éxito']);
 } catch (Exception $e) {
-    echo json_encode(['success' => false, 'message' => 'Error al enviar el correo: ' . $mail->ErrorInfo]);
+    error_log('Error al enviar el correo: ' . $e->getMessage());
+    echo json_encode(['success' => false, 'message' => 'Error al enviar el correo: ' . $e->getMessage()]);
 }
 ?>
