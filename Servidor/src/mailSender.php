@@ -9,7 +9,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
     exit();
 }
 
-require __DIR__ . '/../vendor/autoload.php'; 
+require 'https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/PHPMailer.php';
+require 'https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/SMTP.php';
+require 'https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/Exception.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'https://raw.githubusercontent.com/vlucas/phpdotenv/main/src/Dotenv.php';
 
 use Dotenv\Dotenv;
 $dotenv = Dotenv::createImmutable(__DIR__);
