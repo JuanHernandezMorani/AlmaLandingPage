@@ -12,18 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 require 'https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/PHPMailer.php';
 require 'https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/SMTP.php';
 require 'https://raw.githubusercontent.com/PHPMailer/PHPMailer/master/src/Exception.php';
+require 'https://raw.githubusercontent.com/vlucas/phpdotenv/main/src/Dotenv.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
-require 'https://raw.githubusercontent.com/vlucas/phpdotenv/main/src/Dotenv.php';
 
 use Dotenv\Dotenv;
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 
 $data = json_decode(file_get_contents('php://input'), true);
 
