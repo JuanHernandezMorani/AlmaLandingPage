@@ -49,21 +49,9 @@ export default function Contacto() {
     .then((response) => response.json())
     .then((data) => {
       console.log('Correo enviado con éxito:', data);
-      Swal.fire({
-        icon: 'success',
-        title: 'Correo enviado exitosamente',
-        text: 'Hemos recibido tu mensaje y nos pondremos en contacto pronto.',
-        confirmButtonText: 'Aceptar',
-      });
     })
     .catch((error) => {
       console.error('Error al enviar correo:', error);
-      Swal.fire({
-        icon: 'error',
-        title: 'Error al enviar el correo',
-        text: 'Hubo un problema al enviar tu mensaje, por favor intenta nuevamente.',
-        confirmButtonText: 'Aceptar',
-      });
     });
   }
 
