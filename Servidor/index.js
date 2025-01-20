@@ -1,8 +1,9 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
-env.config();
+dotenv.config();
 
 const app = express();
 app.use(express.json());
