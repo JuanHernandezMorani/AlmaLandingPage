@@ -38,7 +38,7 @@ export default function Contacto() {
   };
 
   function sendMail(formData) {
-    fetch('http://localhost:5000/send-email', {
+    fetch('https://almalandingpage-production.up.railway.app/send-email', {
       method: 'POST',
       body: JSON.stringify(formData),
       headers: {
