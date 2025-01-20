@@ -1,7 +1,6 @@
 import '../style/contacto.css';
 import Form from '../components/form/Form';
 import React, { useState } from "react";
-import Swal from 'sweetalert2';
 
 export default function Contacto() {
   const [formSubmitted, setFormSubmitted] = useState(false);
