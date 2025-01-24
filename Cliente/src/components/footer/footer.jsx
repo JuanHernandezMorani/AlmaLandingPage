@@ -20,7 +20,7 @@ export default function Footer(){
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                             <img src={facebook} alt="Facebook" className="img-fluid" />
                         </a>
-                        <a href="https://www.instagram.com/almabtl/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                             <img src={instagram} alt="Instagram" className="img-fluid" />
                         </a>
                     </div>

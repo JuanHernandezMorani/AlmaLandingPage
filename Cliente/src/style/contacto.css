@@ -67,9 +67,11 @@
   }
 
   .contact-form-button {
+    text-align: center;
     margin-top: 1vw;
-    width: 4.8vw;
-    height: 2.4vw;
+    width: calc(4.8vw + 10px);
+    height: calc(2.4vw + 5px);
+    aspect-ratio: 1/1;
     font-size: 0.73vw;
     background-color: black;
     color: white;
