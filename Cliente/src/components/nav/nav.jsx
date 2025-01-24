@@ -69,7 +69,7 @@ export default function Navbar() {
                     <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                         <img src={selectD()} alt="Facebook" className="social-icon" />
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/almabtl/" target="_blank" rel="noopener noreferrer">
                         <img src={selectE()} alt="Instagram" className="social-icon" />
                     </a>
                     <p className={selectF()}>@Almabtl</p>

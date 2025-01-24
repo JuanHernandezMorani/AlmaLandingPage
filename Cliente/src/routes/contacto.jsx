@@ -66,7 +66,7 @@ export default function Contacto() {
             <Form />
         </div>
         <div className="contact-form">
-          {!formSubmitted ? (
+          {formSubmitted ? (
             <div className="mensaje-container">
             <h1 className="mensaje-titulo">¡Nos estaremos comunicando pronto!</h1>
             <p className="mensaje-parrafo">
