@@ -40,43 +40,41 @@ export default function Navbar() {
     }
 
     return (
-        <div className="container-fluid bg-transparent position-absolute z-1">
-    <nav className="navbar">
-        <div className="nav-container-inner">
-            <a className="navbar-brand" href="/">
-                <img src={selectA()} alt="Almabtl_Icon" className="img-fluid" />
-            </a>
-            <ul className="nav-ul">
-                <li className={selectG()}>
-                    <a className="nav-link" href="#agency">AGENCIA&#9662;</a>
-                </li>
-                <li className={selectG()}>
-                    <a className="nav-link" href="#services">SERVICIOS&#9662;</a>
-                </li>
-                <li className={selectG()}>
-                    <a className="nav-link" href="#portfolios">PORTFOLIOS&#9662;</a>
-                </li>
-                <li className={selectG()}>
-                    <a className="nav-link" href="#clients">CLIENTES&#9662;</a>
-                </li>
-                <li className={selectG()}>
-                    <a className="nav-link" href="#contact">CONTACTO&#9662;</a>
-                </li>
-            </ul>
-            <div className="social-conteiner">
-                <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
-                    <img src={selectB()} alt="LinkedIn" className="social-icon" />
+        <div className="nav-conteiner">
+            <div className="nav-container-inner">
+                <a className="navbar-brand" href="/">
+                    <img src={selectA()} alt="Almabtl_Icon" className="img-fluid" />
                 </a>
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                    <img src={selectD()} alt="Facebook" className="social-icon" />
-                </a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                    <img src={selectE()} alt="Instagram" className="social-icon" />
-                </a>
-                <p className={selectF()}>@Almabtl</p>
+                <ul className="nav-ul">
+                    <li className={selectG()}>
+                        <a className="nav-link" href="#agency">AGENCIA&#9662;</a>
+                    </li>
+                    <li className={selectG()}>
+                        <a className="nav-link" href="#services">SERVICIOS&#9662;</a>
+                    </li>
+                    <li className={selectG()}>
+                        <a className="nav-link" href="#portfolios">PORTFOLIOS&#9662;</a>
+                    </li>
+                    <li className={selectG()}>
+                        <a className="nav-link" href="#clients">CLIENTES&#9662;</a>
+                    </li>
+                    <li className={selectG()}>
+                        <a className="nav-link" href="#contact">CONTACTO&#9662;</a>
+                    </li>
+                </ul>
+                <div className="social-conteiner">
+                    <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+                        <img src={selectB()} alt="LinkedIn" className="social-icon" />
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <img src={selectD()} alt="Facebook" className="social-icon" />
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <img src={selectE()} alt="Instagram" className="social-icon" />
+                    </a>
+                    <p className={selectF()}>@Almabtl</p>
+                </div>
             </div>
         </div>
-    </nav>
-</div>
     );
 }

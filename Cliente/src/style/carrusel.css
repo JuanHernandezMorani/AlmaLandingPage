@@ -4,11 +4,10 @@
     position: relative;
     width: 100%;
     height: 47vw;
-    margin-right: 3vw;
 }
 
 .carrusel-imgs img {
-    width: 100vw;
+    width: 100%;
     height: 46.625vw;
     object-fit: fill;
     position: absolute;
@@ -48,6 +47,7 @@
     flex-direction: column;
     align-items: flex-start;
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
 }
@@ -69,7 +69,7 @@
     font-weight: normal;
     white-space: pre-wrap;
     font-size: 1.85vw;
-    left: 53vw;
+    left: 51.75vw;
     top: 18vw;
 }
 
@@ -90,15 +90,34 @@
     z-index: 4;
     position: absolute;
     left: 76vw;
-    top: 35vw;
+    top: 36vw;
 }
 
-.carrusel-component-2 h1,
-.carrusel-component-3 h1,
-.carrusel-component-4 h1,
-.carrusel-component-5 h1,
-.carrusel-component-6 h1,
+.carrusel-component-2 h1 {
+    left: 60vw;
+}
+
+.carrusel-component-3 h1 {
+    left: 66vw;
+}
+
+.carrusel-component-4 h1 {
+    left: 77.5vw;
+}
+
+.carrusel-component-5 h1 {
+    left: 36.5vw;
+}
+
+.carrusel-component-6 h1 {
+    left: 62vw;
+}
+
 .carrusel-component-7 h1 {
+    left: 64.5vw;
+}
+
+.project_h1 {
     position: absolute;
     display: flex;
     color: white;
@@ -110,7 +129,6 @@
     cursor: default;
     margin: 0;
     font-weight: normal;
-    left: 60vw;
     top: 26vw;
 }
 

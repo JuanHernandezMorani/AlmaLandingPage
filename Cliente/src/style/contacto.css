@@ -2,23 +2,25 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 3vh;
-    margin-bottom: 5vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    max-width: 100%;
+    margin-top: 1vw;
+    margin-bottom: 3vw;
+    margin-left: 4vw;
 }
 
 .contact-h1 {
     margin-bottom: 0;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 1.51vw;
+    margin-left: 3.5vw;
 }
 
 .contact-h2 {
-    margin-top: 0;
-    margin-bottom: 8vh;
+    margin-top: 1vw;
+    margin-bottom: 4.46vw;
+    margin-left: 3.5vw;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 1.21vw;
 }
 
 .contact-inner {
@@ -32,32 +34,30 @@
 }
 
 .contact-form-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.92vw;
   }
   
   .form-input,
   .form-textarea {
     border: 1px solid #ccc;
-    border-radius: 5px;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-right: 1vh;
-    padding-left: 3vh;
-    font-size: 16px;
+    border-radius: 0.3vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    padding-right: 0.5vw;
+    padding-left: 1.65vw;
+    font-size: 0.96vw;
     font-family: 'Arial', sans-serif;
     text-align: start;
     width: 50vw;
-    height: 7vh;
+    height: 3.88vw;
     box-sizing: border-box;
   }
   
   .form-textarea {
     resize: none;
-    height: 100px;
-    padding-top: 2vh;
+    height: 6vw;
   }
   
   .form-input:focus,
@@ -67,9 +67,10 @@
   }
 
   .contact-form-button {
-    width: 80px;
-    height: 40px;
-    font-size: 12px;
+    margin-top: 1vw;
+    width: 4.8vw;
+    height: 2.4vw;
+    font-size: 0.73vw;
     background-color: black;
     color: white;
     cursor: pointer;
@@ -77,35 +78,37 @@
   }
 
   .contact-form {
-    margin-top: 10vh;
+    margin-top: 2.5vw;
   }
 
   .mensaje-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    padding: 0.96vw;
+    border: 0.06vw solid #ccc;
+    border-radius: 0.48vw;
     background-color: #f9f9f9;
     max-width: 50vw;
-    margin: 16px auto;
+    margin: 0.96vw auto;
   }
   
   .mensaje-titulo {
-    font-size: 2.75rem;
+    font-size: 2.34vw;
     font-weight: bold;
-    margin-bottom: 4vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
+    white-space: nowrap;
+    margin-bottom: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
   }
   
   .mensaje-parrafo {
-    font-size: 1.38rem;
+    font-size: 1.32vw;
     font-weight: normal;
+    white-space: pre-wrap;
     text-align: start;
-    margin-bottom: 1vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
+    margin-bottom: 0.5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
     color: #333;
   }

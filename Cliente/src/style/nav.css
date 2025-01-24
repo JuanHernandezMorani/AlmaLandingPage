@@ -1,9 +1,20 @@
+.nav-conteiner{
+    background-color: transparent;
+    position: absolute;
+    top: 2vw;
+    left: 12vw;
+    margin: 0;
+    padding: 0;
+}
+
 .nav-container-inner {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
     background-color: transparent;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    gap: 4vw;
 }
 
 .navbar-brand {

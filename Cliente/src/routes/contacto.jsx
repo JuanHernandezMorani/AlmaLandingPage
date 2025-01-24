@@ -1,6 +1,7 @@
 import '../style/contacto.css';
 import Form from '../components/form/Form';
 import React, { useState } from "react";
+import { Bolder } from "../components/helper/helper.jsx";
 
 export default function Contacto() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -65,16 +66,14 @@ export default function Contacto() {
             <Form />
         </div>
         <div className="contact-form">
-          {formSubmitted ? (
+          {!formSubmitted ? (
             <div className="mensaje-container">
             <h1 className="mensaje-titulo">¡Nos estaremos comunicando pronto!</h1>
             <p className="mensaje-parrafo">
-              Recibimos tu consulta, y nos estaremos contactando en las próximas 48
-              horas.
+              <Bolder text={"Recibimos tu consulta, y nos estaremos contactando\nen las próximas 48 horas."} toBold={["48","horas"]}/>
             </p>
             <p className="mensaje-parrafo">
-              Recuerda que si no ves nuestra respuesta, revisa dentro de correo no
-              deseado de tu mail.
+              <Bolder text={"Recuerda que en caso de no ver nuestra respuesta,\nbusca el mail dentro de correo no deseado de tu correo."} toBold={["no","ver","correo","deseado"]}/>
             </p>
           </div>
           ) : (

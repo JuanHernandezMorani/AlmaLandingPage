@@ -3,6 +3,8 @@ import "../style/clientes.css";
 import linkedin from "../imgs/ico/linkedin-g.png";
 import facebook from "../imgs/ico/facebook-g.png";
 import instagram from "../imgs/ico/instagram-g.png";
+import Divider from '@mui/material/Divider';
+import  { Bolder } from "../components/helper/helper.jsx";
 
 import a from "../imgs/cli/a.png";
 import b from "../imgs/cli/b.png";
@@ -52,7 +54,7 @@ export default function Clientes() {
 
     return (
         <div className="clients-container">
-        <div className="clients-follow">
+            <div className="clients-follow">
             <h2>SEGUINOS EN NUESTRAS REDES SOCIALES</h2>
             <ul className="follow-imgs">
                 <li className="follow-li-imgs-1">
@@ -71,33 +73,34 @@ export default function Clientes() {
                     </a>
                 </li>
             </ul>
-        </div>
-        <div className="clients-inner">
+            </div>
+            <div className="clients-inner">
             <h1 className="clientes-h1">CLIENTES</h1>
             <h2>Estas empresas ya confían en nosotros.</h2>
-            <div className="row">
-                    {cImgs.map((img, index) => (
-                        <div key={index} className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                            <img src={img} alt={`client-${index + 1}`} className="img-fluid shadow rounded" />
+            <div className="clients-list">
+                {cImgs.map((img, index) => (
+                    <img src={img} alt={`client-${index + 1}`} className="img-fluid" />
+                ))}
+            </div>
+            </div>
+            <div className="clients-sc">
+                <div className="clients-sc-bg">
+                <img src={rhbg} alt="rhbg" className="img-fluid"/>
+                </div>
+                <p className="clients-sc-p"> <Bolder text={"¿ESTÁS LISTO PARA EMBARCARTE\nCON NOSOTROS?"} toBold={["¿","ESTÁS","LISTO","NOSOTROS"]}/></p>
+                <div className="partners-inner">
+                <h1 className="clientes-h1">PARTNERS</h1>
+                <div className="partners-list">
+                    {[wooprom, graficatucuman, ecofold, root, ecoprint, boomstudio, sapyd].map((partner, index) => (
+                        <div key={index} className="partners-list-img">
+                            <img src={partner} alt={`partner-${index + 1}`} className="img-fluid" />
                         </div>
                     ))}
                 </div>
-        </div>
-        <div className="clients-sc">
-                <img src={rhbg} alt="rhbg" className="clients-sc-bg"/>
-                <p className="clients-sc-p"> ¿ESTÁS LISTO PARA EMBARCARTE CON NOSOTROS?</p>
-                <div className="partners-inner">
-                    <h1 className="clientes-h1">PARTNERS</h1>
-                    <div className="partners-list">
-                        {[wooprom, graficatucuman, ecofold, root, ecoprint, boomstudio, sapyd].map((partner, index) => (
-                            <div key={index} className="partners-list-img">
-                                <img src={partner} alt={`partner-${index + 1}`} className="img-fluid" />
-                            </div>
-                        ))}
-                    </div>
-                    <h1 className="clientes-h1">CONTACTO</h1>
                 </div>
+                <Divider variant="middle" sx={{ background: 'darkgrey', height: '0.3vh' }} />
+                <h1 className="clientes-h1-f">CONTACTO</h1>
+            </div>
         </div>
-    </div>
     );
 }
