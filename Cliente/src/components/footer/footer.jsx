@@ -1,35 +1,32 @@
 import React from 'react';
 import '../../style/Footer.css';
-import linkedin from '../../imgs/ico/linkedin.png'
-import facebook from '../../imgs/ico/facebook.png'
-import instagram from '../../imgs/ico/instagram.png'
+import linkedin from '../../imgs/ico/white-linkedin.png';
+import facebook from '../../imgs/ico/white-fb.png';
+import instagram from '../../imgs/ico/white-instagram.png';
 import footlogo from '../../imgs/log/Alma_Footer.png';
 
 export default function Footer(){
     return (
-        <div className='foot-container'>
-            <div className='foot-inner-container'>
-                <div className='foot-ico'>
-                    <img src={footlogo} alt='@Alma'/>
+        <footer className="container-fluid">
+            <div className="container d-flex justify-content-between align-items-center">
+                <div className='footer-img-conteiner'>
+                    <img src={footlogo} alt="@Alma" className="img-fluid" />
                 </div>
-                <div className="foot-social">
-                    <div className='foot-social-ico'>
+                <div className="text-center">
+                    <div className="d-flex justify-content-center mb-3 foot-icons-conteiner">
                         <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
-                            <img src={linkedin} className="bi bi-linkedin" alt="LinkedIn" />
+                            <img src={linkedin} alt="LinkedIn" className="mx-2 social-icon-foot" />
                         </a>
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                            <img src={facebook} className="bi bi-facebook" alt="Facebook" />
+                            <img src={facebook} alt="Facebook" className="mx-2 social-icon-foot" />
                         </a>
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                            <img src={instagram} className="bi bi-instagram" alt="Instagram" />
+                            <img src={instagram} alt="Instagram" className="mx-2 social-icon-foot" />
                         </a>
                     </div>
-                    <div className='foot-link'>
-                        <a href="https://almabtl.com/" className="navbar-text">www.almabtl.com</a>
-                    </div>
+                    <a href="https://almabtl.com/" className="text-decoration-none fs-5 fw-bold text-danger">www.almabtl.com</a>
                 </div>
             </div>
-        </div>
-        
+        </footer>
     );
 }

@@ -2,10 +2,14 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    align-items: flex-start;
 }
 
 .clientes-h1 {
-    font-size: 3rem;
+    display: flex;
+    font-size: calc(5px + 2.8vw);
+    align-items: start;
+    font-weight: bold;
 }
 
 .clients-inner {
@@ -18,57 +22,44 @@
 .clients-follow {
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: rgb(245, 245, 245);
-    width: 100%;
 }
 
 .clients-follow h2 {
-    font-size: 2rem;
-    max-width: fit-content;
+    margin-top: 6vw;
+    font-size: 1.94vw;
+    white-space: nowrap;
 }
 
 .follow-imgs {
     display: flex;
     padding: 0;
-    justify-content: space-between;
-    margin-top: 2vh;
-    margin-bottom: 6vh;
+    margin-top: 2vw;
+    margin-bottom: 6vw;
     list-style: none;
 }
 
-.follow-li-imgs-1 img {
+.follow-li-imgs-1 img,
+.follow-li-imgs-2 img,
+.follow-li-imgs-3 img {
     position: relative;
     max-width: 60px;
     max-height: 60px;
     right: 14vw;
 }
 
-.follow-li-imgs-2 img {
-    position: relative;
-    max-width: 60px;
-    max-height: 60px;
-}
-
-.follow-li-imgs-3 img {
-    position: relative;
-    max-width: 60px;
-    max-height: 60px;
-    left: 14vw;
-}
-
 .clients-list {
     display: flex;
     flex-direction: row;
     list-style: none;
-    margin-bottom: 3vh;
+    margin-bottom: 3vw;
     padding: 0;
 }
 
 .clients-list-img-1{
     margin: 0;
-    max-width: 180px;
-    max-height: 140px;;
+    max-width: calc(1px + 3.3vw);
+    max-height: calc(1px + 2.87vw);
 }
 
 .clients-list-img-2,
@@ -77,8 +68,8 @@
 .clients-list-img-5,
 .clients-list-img-6{
     margin-left: 5.5vw;
-    max-width: 180px;
-    max-height: 140px;
+    max-width: calc(1px + 3.3vw);
+    max-height: calc(1px + 2.87vw);
 }
 
 .clients-sc {
@@ -102,9 +93,9 @@
 .clients-sc-p {
     font-size: 4rem;
     color: white;
-    margin-top: 70vh;
+    margin-top: 70vw;
     margin-left: 25vw;
-    margin-bottom: 26vh;
+    margin-bottom: 26vw;
     max-width: 1200px;
     white-space: pre-wrap;
     text-align: center;
@@ -123,139 +114,11 @@
     flex-direction: row;
     list-style: none;
     padding: 0;
-    margin-bottom: 10vh;
+    margin-bottom: 10vw;
 }
 
-.partners-list-img-1 {
+.partners-list-img {
     margin: 0;
-    max-width: 150px;
-    max-height: 150px;
-}
-
-.partners-list-img-2,
-.partners-list-img-3,
-.partners-list-img-4,
-.partners-list-img-5,
-.partners-list-img-6,
-.partners-list-img-7 {
-    margin-left: 5vw;
-    max-width: 150px;
-    max-height: 150px;
-}
-
-@media (max-width: 1440px) and (min-width: 1025px) {
-    .clientes-h1 {
-        font-size: 2.5rem;
-    }
-
-    .clients-inner {
-        margin-left: 5vw;
-    }
-
-    .clients-follow h2 {
-        font-size: 1.8rem;
-    }
-
-    .clients-sc-p {
-        font-size: 3.5rem;
-        margin-left: 20vw;
-    }
-
-    .clients-list-img-1,
-    .clients-list-img-2,
-    .clients-list-img-3,
-    .clients-list-img-4,
-    .clients-list-img-5,
-    .clients-list-img-6 {
-        max-width: 150px;
-        max-height: 120px;
-    }
-
-    .partners-list-img-1,
-    .partners-list-img-2,
-    .partners-list-img-3,
-    .partners-list-img-4,
-    .partners-list-img-5,
-    .partners-list-img-6,
-    .partners-list-img-7 {
-        max-width: 120px;
-        max-height: 120px;
-    }
-}
-
-@media (max-width: 768px) {
-    .clientes-h1 {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .clients-inner {
-        margin-left: 0;
-        align-items: center;
-        text-align: center;
-    }
-
-    .clients-follow {
-        padding: 0 5%;
-    }
-
-    .clients-follow h2 {
-        font-size: 1.5rem;
-    }
-
-    .follow-imgs {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .follow-li-imgs-1 img,
-    .follow-li-imgs-2 img,
-    .follow-li-imgs-3 img {
-        max-width: 50px;
-        max-height: 50px;
-    }
-
-    .clients-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .clients-list-img-1,
-    .clients-list-img-2,
-    .clients-list-img-3,
-    .clients-list-img-4,
-    .clients-list-img-5,
-    .clients-list-img-6 {
-        margin: 1vh 0;
-        max-width: 140px;
-        max-height: 120px;
-    }
-
-    .clients-sc-p {
-        font-size: 2rem;
-        margin: 5vh 0;
-    }
-
-    .partners-inner {
-        margin-left: 0;
-        align-items: center;
-        text-align: center;
-    }
-
-    .partners-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .partners-list-img-1,
-    .partners-list-img-2,
-    .partners-list-img-3,
-    .partners-list-img-4,
-    .partners-list-img-5,
-    .partners-list-img-6,
-    .partners-list-img-7 {
-        margin: 1vh 0;
-        max-width: 90px;
-        max-height: 90px;
-    }
+    width: calc(1px + 3vw);
+    height: calc(1px + 3vw);
 }

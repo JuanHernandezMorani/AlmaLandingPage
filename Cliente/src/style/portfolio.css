@@ -1,13 +1,16 @@
 .portfolios-container{
     display: flex;
     flex-direction: column;
+    max-width: 100%;
+    margin-top: 2vw;
 }
 
 .port-title {
-    font-size: 3rem;
+    display: flex;
+    font-size: calc(5px + 2.8vw);
+    align-items: start;
+    margin-left: 7.5vw;
     font-weight: bold;
-    width: fit-content;
-    margin-left: 10vw;
 }
 
 .portfolios-inner{
@@ -19,40 +22,53 @@
 .inner-ul {
     display: flex;
     flex-direction: row;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 6vw;
+    margin-right: 3vw;
+    justify-content: space-between;
     list-style: none;
-    margin-left: 3vw;
 }
 .inner-ul li{
-    margin-left: 5vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
 }
 
 .port-button {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1.2vw;
+    font-weight: normal;
+    color: black;
+    white-space: nowrap;
+}
+
+.port-button:active,
+.port-button:hover,
+.port-button.active {
+    color: #b6b6b6;
 }
 
 .inner-port-component {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     flex-wrap: wrap;
-    margin-top: 5vh;
-    margin-bottom: 10vh;
-    padding-left: 7vw;
-    padding-right: 3vw;
-    width: 100%;
-    height: 80vh;
+    margin-top: 4vw;
+    margin-left: 6.5vw;
+    margin-right: 2vw;
+    height: 46vw;
 }
 
 .inner-port-component img {
-    max-width: 350px;
-    max-height: 350px;
-    flex: 0 0 33.3333%;
-    margin-bottom: 5vh;
-    margin-left: 2vw;
+    height: 23vw;
+    margin: 0;
+    padding: 0;
+    flex-basis: 25%;
+    max-width: 25%;
 }
 
 .portfolio-foot {
@@ -68,83 +84,20 @@
 }
 
 .port-h1-foot {
-    font-size: 4rem;
-    width: 1300px;
-    font-weight: normal;
+    font-size: calc(2px + 4vw);
+    text-align: center;
+    white-space: pre-wrap;
 }
 
 .go-button {
     border-style: outset;
     border-color: black;
-    width: 275px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: calc(5px + 16.5vw);
+    height: calc(1px + 3vw);
+    font-size: calc(1px + 1.25vw);
     background-color: transparent;
     color: black;
     cursor: pointer;
     z-index: 4;
-    margin-bottom: 10vh;
-}
-
-@media (max-width: 1440px) and (min-width: 1025px) {
-    .port-title {
-        font-size: 2.5rem;
-        margin-left: 5vw;
-    }
-
-    .inner-port-component {
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-
-    .inner-port-component img {
-        max-width: 300px;
-        max-height: 300px;
-    }
-
-    .go-button {
-        width: 250px;
-        font-size: 1.25rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .port-title {
-        font-size: 2rem;
-        margin-left: 5vw;
-    }
-
-    .inner-ul {
-        flex-direction: column;
-        margin-left: 0;
-        padding-left: 0;
-    }
-
-    .inner-ul li {
-        margin-left: 0;
-    }
-
-    .inner-port-component {
-        padding-left: 5vw;
-        padding-right: 5vw;
-        width: 100%;
-        height: auto;
-        margin-bottom: 20vh;
-    }
-
-    .inner-port-component img {
-        max-width: 100%;
-        max-height: 250px;
-        margin-left: 0;
-        margin-bottom: 3vh;
-    }
-
-    .port-h1-foot {
-        font-size: 2.5rem;
-    }
-
-    .go-button {
-        width: 200px;
-        font-size: 1.2rem;
-    }
+    margin-bottom: 10vw;
 }

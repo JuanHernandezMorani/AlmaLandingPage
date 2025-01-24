@@ -3,409 +3,162 @@
     align-items: center;
     position: relative;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    height: 47vw;
+    margin-right: 3vw;
 }
 
 .carrusel-imgs img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100vw;
+    height: 46.625vw;
+    object-fit: fill;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
 }
 
-.carrussel-buttons {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 99;
-    transform: translateY(-50%);
-}
-
-.bt1 button, .bt2 button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 1em 1.5em;
-    border: none;
-    border-radius: 50%;
-    font-size: 1.5em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 99;
-}
-
-.bt1 button:hover, .bt2 button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 99;
-}
-
 .navigation {
     position: absolute;
-    bottom: 20px;
-    width: 100%;
+    top: 45vw;
+    right: 24.5vw;
+    width: 40vw;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    z-index: 99;
+    gap: 0.62vw;
+    z-index: 3;
 }
 
 .nav-dot {
-    width: 40px;
-    height: 10px;
-    background-color: rgba(200, 200, 200, 0.5);
+    width: calc(1px + 3vw);
+    height: 0.3vw;
+    background-color: rgb(195,195,195);
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
 }
 
 .nav-dot.active {
-    background-color: rgba(43, 43, 43, 0.8);
+    background-color: rgb(255,255,255);
 }
 
 .nav-dot:hover {
-    background-color: rgba(133, 125, 125, 0.808);
+    background-color: rgb(215,215,215);
 }
 
 .carrusel-main-img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-height: 100%;
-    margin-left: 48.3vw;
-    margin-top: 29.5vh;
-    z-index: 4;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .carrusel-main-img h2 {
-   text-align: end;
-   font-size: 3.5rem;
-   white-space: nowrap;
-   font-weight: normal;
-   margin: 0;
+    position: absolute;
+    top: 34vw;
+    left: 48vw;
+    text-align: end;
+    font-size: 2.97vw;
+    white-space: nowrap;
+    font-weight: normal;
 }
 
 .carrusel-main-img h3 {
+    position: absolute;
     text-align: end;
     color: white;
+    font-weight: normal;
     white-space: pre-wrap;
-    font-size: 3rem;
-    margin-left: 1vw;
-    margin-top: 0;
-    margin-bottom: 25vh;
+    font-size: 1.85vw;
+    left: 53vw;
+    top: 18vw;
 }
 
-.bold-word {
-    font-weight: bold;
+.carrusel-component-2 button,
+.carrusel-component-3 button,
+.carrusel-component-4 button,
+.carrusel-component-5 button,
+.carrusel-component-6 button,
+.carrusel-component-7 button {
+    border-style: outset;
+    border-color: white;
+    width: calc(5px + 16.5vw);
+    height: calc(1px + 3vw);
+    font-size: calc(1px + 1.25vw);
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    z-index: 4;
+    position: absolute;
+    left: 76vw;
+    top: 35vw;
+}
+
+.carrusel-component-2 h1,
+.carrusel-component-3 h1,
+.carrusel-component-4 h1,
+.carrusel-component-5 h1,
+.carrusel-component-6 h1,
+.carrusel-component-7 h1 {
+    position: absolute;
+    display: flex;
+    color: white;
+    line-height: 1;
+    font-size: 4.07vw;
+    white-space: pre-wrap;
+    text-align: end;
+    z-index: 4;
+    cursor: default;
+    margin: 0;
+    font-weight: normal;
+    left: 60vw;
+    top: 26vw;
 }
 
 .carrusel-component-2 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 40vh;
-    margin-left: 60vw;
-}
-
-.carrusel-component-2 h1 {
-    display: flex;
-    color: white;
-    line-height: 1;
-    font-size: 5.2rem;
-    white-space: pre-wrap;
-    text-align: end;
-    z-index: 4;
-    cursor: default;
-    margin: 0;
-    font-weight: normal;
-}
-
-.carrusel-component-2 button {
-    border-style: outset;
-    border-color: white;
-    width: 275px;
-    height: 50px;
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    z-index: 4;
+    margin-top: 30vw;
+    margin-left: 59vw;
 }
 
 .carrusel-component-3 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-left: 68vw;
-    margin-top: 44vh;
-}
-
-.carrusel-component-3 button {
-    border-style: outset;
-    border-color: white;
-    width: 275px;
-    height: 50px;
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    z-index: 4;
-}
-
-.carrusel-component-3 h1 {
-    display: flex;
-    color: white;
-    line-height: 1;
-    font-size: 4.75rem;
-    white-space: pre-wrap;
-    text-align: end;
-    z-index: 4;
-    cursor: default;
-    margin: 0;
-    font-weight: normal;
+    margin-top: 30vw;
+    margin-left: 67vw;
 }
 
 .carrusel-component-4 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-left: 77.5vw;
-    margin-top: 45vh;
-}
-
-.carrusel-component-4 button {
-    border-style: outset;
-    border-color: white;
-    width: 275px;
-    height: 50px;
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    z-index: 4;
-}
-
-.carrusel-component-4 h1 {
-    display: flex;
-    color: white;
-    line-height: 1;
-    font-size: 5.2rem;
-    white-space: pre-wrap;
-    text-align: end;
-    z-index: 4;
-    cursor: default;
-    margin: 0;
-    font-weight: normal;
+    margin-top: 30vw;
+    margin-left: 70vw;
 }
 
 .carrusel-component-5 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    margin-top: 30vw;
     margin-left: 32.5vw;
-    margin-top: 40vh;
-}
-
-.carrusel-component-5 h1 {
-    display: flex;
-    color: white;
-    line-height: 1;
-    font-size: 5.2rem;
-    white-space: pre-wrap;
-    text-align: end;
-    z-index: 4;
-    cursor: default;
-    margin: 0;
-    font-weight: normal;
-}
-
-.carrusel-component-5 button {
-    border-style: outset;
-    border-color: white;
-    width: 275px;
-    height: 50px;
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    z-index: 4;
 }
 
 .carrusel-component-6 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-left: 60vw;
-    margin-top: 43vh;
+    margin-top: 30vw;
+    margin-left: 61vw;
 
-}
-
-.carrusel-component-6 h1 {
-    display: flex;
-    color: white;
-    line-height: 1;
-    font-size: 5.2rem;
-    white-space: pre-wrap;
-    text-align: end;
-    z-index: 4;
-    cursor: default;
-    margin: 0;
-    font-weight: normal;
-}
-
-.carrusel-component-6 button {
-    border-style: outset;
-    border-color: white;
-    width: 275px;
-    height: 50px;
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    z-index: 4;
 }
 
 .carrusel-component-7 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-left: 64.5vw;
-    margin-top: 45vh;
-}
-
-.carrusel-component-7 h1 {
-    display: flex;
-    color: white;
-    line-height: 1;
-    font-size: 5rem;
-    white-space: pre-wrap;
-    text-align: end;
-    z-index: 4;
-    cursor: default;
-    margin: 0;
-    font-weight: normal;
-}
-
-.carrusel-component-7 button {
-    border-style: outset;
-    border-color: white;
-    width: 275px;
-    height: 50px;
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    z-index: 4;
-}
-
-/*--------------------------------------------------------------------------------------------------------------*/
-
-/* Media query para pantallas entre 1024px y 1440px */
-@media (max-width: 1440px) and (min-width: 1025px) {
-    .carrusel-main-img {
-        margin-left: 30vw;
-        margin-top: 20vh;
-    }
-    .carrusel-component-2 {
-        margin-left: 40vw;
-        margin-top: 30vh;
-    }
-    .carrusel-component-3 {
-        margin-left: 45vw;
-        margin-top: 35vh;
-    }
-    .carrusel-component-4 {
-        margin-left: 60vw;
-        margin-top: 35vh;
-    }
-    .carrusel-component-5 {
-        margin-left: 20vw;
-        margin-top: 30vh;
-    }
-    .carrusel-component-6 {
-        margin-left: 40vw;
-        margin-top: 33vh;
-    }
-    .carrusel-component-7 {
-        margin-left: 50vw;
-        margin-top: 35vh;
-    }
-}
-
-/* Media query para pantallas entre 768px y 1024px */
-@media (max-width: 1024px) and (min-width: 769px) {
-    .carrusel-main-img h2 {
-        font-size: 2.5rem;
-    }
-    .carrusel-main-img h3 {
-        font-size: 2rem;
-    }
-    .carrusel-main-img {
-        margin-left: 20vw;
-        margin-top: 15vh;
-    }
-    .carrusel-component-2 h1,
-    .carrusel-component-3 h1,
-    .carrusel-component-4 h1,
-    .carrusel-component-5 h1,
-    .carrusel-component-6 h1,
-    .carrusel-component-7 h1 {
-        font-size: 3rem;
-    }
-    .carrusel-component-2 button,
-    .carrusel-component-3 button,
-    .carrusel-component-4 button,
-    .carrusel-component-5 button,
-    .carrusel-component-6 button,
-    .carrusel-component-7 button {
-        width: 200px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-}
-
-/* Media query para pantallas menores a 768px */
-@media (max-width: 768px) {
-    .carrusel-main-img h2 {
-        font-size: 2rem;
-    }
-    .carrusel-main-img h3 {
-        font-size: 1.5rem;
-    }
-    .carrusel-main-img {
-        margin-left: 10vw;
-        margin-top: 10vh;
-    }
-    .carrusel-component-2,
-    .carrusel-component-3,
-    .carrusel-component-4,
-    .carrusel-component-5,
-    .carrusel-component-6,
-    .carrusel-component-7 {
-        margin-left: 10vw;
-        margin-top: 20vh;
-        align-items: center;
-    }
-    .carrusel-component-2 h1,
-    .carrusel-component-3 h1,
-    .carrusel-component-4 h1,
-    .carrusel-component-5 h1,
-    .carrusel-component-6 h1,
-    .carrusel-component-7 h1 {
-        font-size: 2.5rem;
-    }
-    .carrusel-component-2 button,
-    .carrusel-component-3 button,
-    .carrusel-component-4 button,
-    .carrusel-component-5 button,
-    .carrusel-component-6 button,
-    .carrusel-component-7 button {
-        width: 150px;
-        height: 35px;
-        font-size: 1rem;
-    }
+    margin-top: 30vw;
+    margin-left: 64vw;
 }

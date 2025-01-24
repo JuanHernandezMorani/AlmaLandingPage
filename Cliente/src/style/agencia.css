@@ -1,28 +1,32 @@
 .agency-container{
     display: flex;
     flex-direction: column;
+    margin-top: 2vw;
 }
 
 .agency-title {
     display: flex;
-    font-size: 2.5rem;
+    font-size: calc(5px + 2.8vw);
     align-items: start;
     margin-left: 7.5vw;
+    font-weight: bold;
 }
 
 .agency-container h2{
     display: flex;
-    font-size: 1.5rem;
+    font-size: calc(5px + 1.8vw);
     align-items: start;
     margin-left: 7.5vw;
+    margin-top: 4vw;
 
 }
 
 .agency-middle {
     display: flex;
     flex-direction: row;
-    margin-top: 3%;
+    margin-top: 4vw;
     justify-content: space-between;
+    margin-bottom: -6vw;
 }
 
 .agency-inner {
@@ -30,20 +34,44 @@
     flex-direction: column;
     align-items: start;
     margin-left: 7.5vw;
-    max-width: 500px;
     line-height: 1.5;
-    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 .agency-inner-imgs {
     position: relative;
-    top: -12vh;
-    left: -25vh;
+    list-style: none;
+    white-space: nowrap;
+    bottom: 6vw;
+    right: 2.5vw;
+    margin-left: 10vw;
+}
+
+.agency-inner-imgs li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vw;
+    align-items: center;
+}
+
+.agency-inner-imgs img {
+    width: 8.3vw;
+    height: 8vw;
+    margin-bottom: 2vw;
+}
+
+.agency-inner-imgs p {
+    font-size: calc(2.1px + 1vw);
+    font-weight: bold;
+    margin-bottom: calc(2vh + 1vw);
+    margin-top: 0;
 }
 
 .agency-description {
-    font-size: 1.35rem;
+    font-size: calc(1px + 1.75vw);
     margin-bottom: 5%;
+    white-space: pre-wrap;
+    font-weight: 500;
 }
 
 
@@ -54,169 +82,31 @@
 }
 
 .agency-text p {
-    font-size: 1.15rem;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
+    font-size: calc(2px + 1.4vw);
+    white-space: pre-wrap;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
 }
 
 .separator {
-    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7vw;
 }
 
 .agency-end {
     position: relative;
-    left: 15%;
-    font-size: 4rem;
-    max-width: 1300px;
-    line-height: 1.5;
-    word-wrap: break-word;
+    text-align: center;
+    font-size: calc(8px + 4vw);
+    line-height: 1.2;
+    white-space: pre-wrap;
     margin: 0;
 }
 
 .separator img {
+    position: relative;
+    bottom: 10vw;
     width: 100%;
-    margin: 0;
-}
-
-@media (max-width: 1440px) and (min-width: 1025px) {
-    .agency-title {
-        font-size: 2rem;
-        margin-left: 5vw;
-    }
-
-    .agency-container h2 {
-        font-size: 1.25rem;
-        margin-left: 5vw;
-    }
-
-    .agency-middle {
-        margin-top: 2%;
-    }
-
-    .agency-inner {
-        margin-left: 5vw;
-        max-width: 450px;
-    }
-
-    .agency-inner-imgs {
-        top: -10vh;
-        left: -20vh;
-    }
-
-    .agency-description {
-        font-size: 1.2rem;
-    }
-
-    .agency-end {
-        font-size: 3.5rem;
-        left: 10%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .agency-container {
-        padding: 0 5%;
-    }
-
-    .agency-title {
-        font-size: 1.8rem;
-        margin-left: 0;
-    }
-
-    .agency-container h2 {
-        font-size: 1.2rem;
-        margin-left: 0;
-    }
-
-    .agency-middle {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .agency-inner {
-        margin-left: 0;
-        max-width: 100%;
-    }
-
-    .agency-inner-imgs {
-        top: -8vh;
-        left: 0;
-        text-align: center;
-    }
-
-    .agency-description {
-        font-size: 1rem;
-        margin-bottom: 3%;
-    }
-
-    .agency-text p {
-        font-size: 1rem;
-        margin-top: 2%;
-        margin-bottom: 2%;
-    }
-
-    .agency-end {
-        font-size: 3rem;
-        left: 0;
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .agency-container {
-        padding: 0 2%;
-    }
-
-    .agency-title {
-        font-size: 1.5rem;
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .agency-container h2 {
-        font-size: 1rem;
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .agency-middle {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 5%;
-    }
-
-    .agency-inner {
-        margin-left: 0;
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .agency-inner-imgs {
-        position: relative;
-        top: 0;
-        left: 0;
-        text-align: center;
-    }
-
-    .agency-description {
-        font-size: 0.9rem;
-        margin-bottom: 2%;
-    }
-
-    .agency-text p {
-        font-size: 0.85rem;
-        margin-top: 1.5%;
-        margin-bottom: 1.5%;
-    }
-
-    .agency-end {
-        font-size: 2.5rem;
-        left: 0;
-        text-align: center;
-        margin-top: 5%;
-    }
-
-    .separator img {
-        margin-top: 2%;
-    }
+    margin-right: 1vw;
 }

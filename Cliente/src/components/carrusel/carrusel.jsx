@@ -1,5 +1,5 @@
 import "../../style/carrusel.css";
-import { React, useContext, useState, useEffect } from 'react';
+import { React, useContext, useState, useEffect, useRef } from 'react';
 import { ImageContext } from '../../context/ImageContext.js';
 import { PortContext } from '../../context/PortContext.js'; 
 import portada from "../../imgs/port/PORTADA_PRINCIPAL.jpg";
@@ -25,29 +25,50 @@ function selectImage(imageID){
 export default function Carrusel() {
     const [current, setCurrent] = useState(1);
     const { setImageID } = useContext(ImageContext);
+    const [count, setCount] = useState(0);
+    const timeoutRef = useRef(null);
+    
 
     useEffect(() => {
         setImageID(current);
         check(current);
-        if (current > 7 || current < 1) {
-            setTimeout(() => {
-                setCurrent(1);
-                setImageID(1);
-                check(1);
-            }, 1);
+
+        if (count === 0) {
+            setCount(5);
+            let next = current < 7 ? current + 1 : 1;
+            setCurrent(next);
+            setImageID(next);
+            check(next);
         }
-    }, [current,setImageID]);
 
-    function previousImage() {
-        current === 1 ? setCurrent(7) : setCurrent(current - 1);
-    }
+        if (current > 7 || current < 1) {
+            setCurrent(1);
+            setImageID(1);
+            check(1);
+        }
 
-    function nextImage() {
-        current === 7 ? setCurrent(1) : setCurrent(current + 1);
-    }
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+
+        if (count > 0) {
+            timeoutRef.current = setTimeout(() => {
+                setCount(prevCount => prevCount - 1);
+            }, 1000);
+        }
+
+        return () => {
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
+        };
+    }, [current, setImageID, count]);
+    
+    
 
     function selectImageByNavigation(index) {
         setCurrent(index);
+        setCount(10000);
     }
 
     function check(componentID){
@@ -77,9 +98,6 @@ export default function Carrusel() {
     }
 
     function SelectComponents() {
-        let a = "somos\nprofesionales";
-        let b = "al SERVICIO de PROFESIONALES";
-    
         const { setPortID } = useContext(PortContext);
     
         function handleButtonClick() {
@@ -91,7 +109,7 @@ export default function Carrusel() {
             return (
                 <div className={styleSelector()}>
                     <h1 className="project_h1">
-                        <HighlightedText text={selectName()} />
+                        <p>{selectName()}</p>
                     </h1>
                     <a href="#portfolios">
                         <button
@@ -106,27 +124,11 @@ export default function Carrusel() {
         } else {
             return (
                 <div className="carrusel-main-img">
-                    <h3>{a}</h3>
-                    <h2>
-                        <HighlightedText text={b} />
-                    </h2>
+                    <h3>{"somos\nprofesionales"}</h3>
+                    <h2>al servicio de profesionales.</h2>
                 </div>
             );
         }
-    }
-    
-
-    function HighlightedText({ text }) {
-        const wordsToBold = ["SERVICIO", "PROFESIONALES","CORPORATIVOS","DAY","CONGRESOS","FILMMAKERS","REGALOS","EMPRESARIALES","LOGISTICA"];
-        const formattedText = text.split(/(\b\S+\b)/).map((word, index) =>
-            wordsToBold.includes(word.trim()) ? (
-                <span key={index} className="bold-word">{word}</span>
-            ) : (
-                word
-            )
-        );
-    
-        return <p>{formattedText}</p>;
     }
 
     function styleSelector(){
@@ -155,18 +157,11 @@ export default function Carrusel() {
 
     return (
         <div className="carrusel-container">
-            <div className="carrussel-buttons">
-                <div className="bt1">
-                    <button onClick={() => previousImage()}>{'<'}</button>
+                <div className="carrusel-imgs">
+                    <img src={selectImage(current)} alt="Carrusel" />
+                    {SelectComponents()}
                 </div>
-                <div className="bt2">
-                    <button onClick={() => nextImage()}>{'>'}</button>
-                </div>
-            </div>
-            <div className="carrusel-imgs">
-                <img src={selectImage(current)} alt="Carrusel" />
-                {SelectComponents()}
-            </div>
+            
             <div className="navigation">
                 {Array.from({ length: 7 }, (_, i) => (
                     <div

@@ -1,4 +1,4 @@
-import {React, useState, useContext} from 'react';
+import {React, useContext} from 'react';
 import { ImageContext } from '../../context/ImageContext';
 import '../../style/nav.css';
 import logo from '../../imgs/log/ALMA_en_negro.png';
@@ -9,122 +9,74 @@ import instagram from '../../imgs/ico/instagram.png';
 import linkedinW from '../../imgs/ico/white-linkedin.png';
 import facebookW from '../../imgs/ico/white-fb.png';
 import instagramW from '../../imgs/ico/white-instagram.png';
-import { Divider } from '@mui/material';
 
 export default function Navbar() {
     const { imageID } = useContext(ImageContext);
-    const [menuOpen, setMenuOpen] = useState(false);
 
     function check() {
         return imageID > 1;
     }
 
     function selectA() {
-        return check() ? "nav-link-white" : "nav-link";
-    }
-
-    function selectB() {
         return check() ? logo2 : logo;
     }
 
-    function selectC() {
-        return check() ? "navbar-text-white" : "navbar-text";
-    }
-
-    function selectD() {
+    function selectB() {
         return check() ? linkedinW : linkedin;
     }
 
-    function selectE() {
+    function selectD() {
         return check() ? facebookW : facebook;
     }
 
-    function selectF() {
+    function selectE() {
         return check() ? instagramW : instagram;
     }
-
-    function selectDivider() {
-        return check() ? (
-            <Divider
-                variant="middle"
-                sx={{ border: 1, borderColor: "white", width: "99%", marginTop: 1 }}
-            />
-        ) : (
-            <Divider
-                variant="middle"
-                sx={{ border: 1, borderColor: "darkgrey", width: "99%", marginTop: 1 }}
-            />
-        );
+    function selectF() {
+        return check() ? "trade-mark-w" : "trade-mark";
+    }
+    function selectG() {
+        return check() ? "nav-item-w" : "nav-item";
     }
 
     return (
-        <div className="container">
-            <div className="inner-container">
-                <a className="navbar-brand" href="/">
-                    <img src={selectB()} alt="Almabtl_Icon" />
+        <div className="container-fluid bg-transparent position-absolute z-1">
+    <nav className="navbar">
+        <div className="nav-container-inner">
+            <a className="navbar-brand" href="/">
+                <img src={selectA()} alt="Almabtl_Icon" className="img-fluid" />
+            </a>
+            <ul className="nav-ul">
+                <li className={selectG()}>
+                    <a className="nav-link" href="#agency">AGENCIA&#9662;</a>
+                </li>
+                <li className={selectG()}>
+                    <a className="nav-link" href="#services">SERVICIOS&#9662;</a>
+                </li>
+                <li className={selectG()}>
+                    <a className="nav-link" href="#portfolios">PORTFOLIOS&#9662;</a>
+                </li>
+                <li className={selectG()}>
+                    <a className="nav-link" href="#clients">CLIENTES&#9662;</a>
+                </li>
+                <li className={selectG()}>
+                    <a className="nav-link" href="#contact">CONTACTO&#9662;</a>
+                </li>
+            </ul>
+            <div className="social-conteiner">
+                <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+                    <img src={selectB()} alt="LinkedIn" className="social-icon" />
                 </a>
-                <button
-                    className="menu-toggle"
-                    aria-label="Toggle navigation"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
-                    <li className="nav-item">
-                        <a className={selectA()} href="#agency">
-                            Agencia
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className={selectA()} href="#services">
-                            Servicios
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className={selectA()} href="#portfolios">
-                            Portfolios
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className={selectA()} href="#clients">
-                            Clientes
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className={selectA()} href="#contact">
-                            Contacto
-                        </a>
-                    </li>
-                </ul>
-                <div className="social">
-                    <a
-                        href="https://www.linkedin.com/feed/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img src={selectD()} className="bi bi-linkedin" alt="LinkedIn" />
-                    </a>
-                    <a
-                        href="https://www.facebook.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img src={selectE()} className="bi bi-facebook" alt="Facebook" />
-                    </a>
-                    <a
-                        href="https://www.instagram.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img src={selectF()} className="bi bi-instagram" alt="Instagram" />
-                    </a>
-                    <p className={selectC()}>@Almabtl</p>
-                </div>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img src={selectD()} alt="Facebook" className="social-icon" />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src={selectE()} alt="Instagram" className="social-icon" />
+                </a>
+                <p className={selectF()}>@Almabtl</p>
             </div>
-            {selectDivider()}
         </div>
+    </nav>
+</div>
     );
 }
