@@ -57,7 +57,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-auto-flow: dense;
     margin-top: 1vw;
-    height: 120vw;
+    height: calc(20vw * 5);
 }
 
 .inner-port-component img {

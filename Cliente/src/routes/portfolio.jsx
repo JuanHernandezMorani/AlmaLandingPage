@@ -6,7 +6,6 @@ import  { Bolder } from "../components/helper/helper.jsx";
 import btl_1 from '../imgs/btl/btl_1.jpg';
 import btl_2 from '../imgs/btl/btl_2.jpg';
 import btl_3 from '../imgs/btl/btl_3.jpg';
-import btl_4 from '../imgs/btl/btl_4.jpg';
 import trade_1 from '../imgs/trade/trade_1.jpg';
 import trade_2 from '../imgs/trade/trade_3.jpg';
 import trade_3 from '../imgs/trade/trade_2.jpg';
@@ -51,7 +50,6 @@ export default function Portfolio() {
                     <img src={btl_1} alt="btl_1" className="img-fluid"/>
                     <img src={btl_2} alt="btl_2" className="img-fluid"/>
                     <img src={btl_3} alt="btl_3" className="img-fluid"/>
-                    <img src={btl_4} alt="btl_4" className="img-fluid"/>
                 </div>
             );
             case 3: return (
@@ -96,7 +94,6 @@ export default function Portfolio() {
                     <img src={btl_1} alt="btl_1" className="img-fluid"/>
                     <img src={btl_2} alt="btl_2" className="img-fluid"/>
                     <img src={btl_3} alt="btl_3" className="img-fluid"/>
-                    <img src={btl_4} alt="btl_4" className="img-fluid"/>
                     <img src={trade_1} alt="trade_1" className="img-fluid"/>
                     <img src={trade_2} alt="trade_2" className="img-fluid"/>
                     <img src={trade_3} alt="trade_3" className="img-fluid"/>

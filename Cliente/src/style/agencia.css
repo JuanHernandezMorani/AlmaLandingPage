@@ -24,15 +24,17 @@
 .agency-middle {
     display: flex;
     flex-direction: row;
-    margin-top: 4vw;
-    justify-content: space-between;
+    margin-top: 2vw;
+    align-items: flex-start;
+    justify-content: space-around;
+    max-height: 41vw;
 }
 
 .agency-inner {
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-left: 7.5vw;
+    margin-left: 6vw;
     line-height: 1.5;
     white-space: pre-wrap;
 }
@@ -41,6 +43,7 @@
     position: relative;
     list-style: none;
     white-space: nowrap;
+    padding: 0;
     bottom: 6vw;
     right: 2.5vw;
     margin-left: 10vw;
@@ -89,14 +92,13 @@
 .separator {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 7vw;
+    margin-top: 8vw;
 }
 
 .agency-end {
     position: relative;
     text-align: center;
-    font-size: 2.45vw;
+    font-size: 4.15vw;
     line-height: 5vw;
     white-space: pre-wrap;
     margin: 0;
@@ -105,5 +107,4 @@
 .separator img {
     position: relative;
     width: 100%;
-    margin-right: 1vw;
 }

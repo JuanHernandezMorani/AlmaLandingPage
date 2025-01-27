@@ -41,7 +41,7 @@ export default function Agencia(){
                     
                 </ul>
             </div>
-            <Divider variant="middle" sx={{ background: 'darkgrey', height: '0.3vh' }} />
+            <Divider variant="middle" sx={{ background: 'darkgrey', height: '0.3vh'}} />
             <div className="separator">
                 <h1 className="agency-end"><Bolder text={"SOMOS PROFESIONALES AL SERVICIO\nDE PROFESIONALES"} toBold={["SOMOS","PROFESIONALES"]} /></h1>
                 <img src={sep} alt="agency-image" className="img-fluid"/>
