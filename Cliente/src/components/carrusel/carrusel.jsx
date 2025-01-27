@@ -68,7 +68,7 @@ export default function Carrusel() {
 
     function selectImageByNavigation(index) {
         setCurrent(index);
-        setCount(10000);
+        setCount(10);
     }
 
     function check(componentID){

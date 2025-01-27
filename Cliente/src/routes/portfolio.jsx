@@ -1,21 +1,15 @@
 import { React, useContext, useState, useEffect } from 'react';
 import { PortContext } from '../context/PortContext.js';
 import '../style/portfolio.css';
-import link from '../imgs/others/separador-final.png';
+import link from '../imgs/others/separador.png';
 import  { Bolder } from "../components/helper/helper.jsx";
-import eventos from "../imgs/port/EVENTOS_CORPORATIVOS.jpg";
-import mkt from "../imgs/port/TRADE_MKT.jpg";
-import ferias from "../imgs/port/FERIAS_&_CONGRESOS.jpg";
-import family from "../imgs/port/FAMILY_DAY.jpg";
-import merchan from "../imgs/port/MERCHAN.jpg";
-import film from "../imgs/port/FOTO_Y_FILMMAKER.jpg";
 import btl_1 from '../imgs/btl/btl_1.jpg';
 import btl_2 from '../imgs/btl/btl_2.jpg';
 import btl_3 from '../imgs/btl/btl_3.jpg';
 import btl_4 from '../imgs/btl/btl_4.jpg';
 import trade_1 from '../imgs/trade/trade_1.jpg';
-import trade_2 from '../imgs/trade/trade_2.jpg';
-import trade_3 from '../imgs/trade/trade_3.jpg';
+import trade_2 from '../imgs/trade/trade_3.jpg';
+import trade_3 from '../imgs/trade/trade_2.jpg';
 import trade_4 from '../imgs/trade/trade_4.jpg';
 import trade_5 from '../imgs/trade/trade_5.jpg';
 import diseño_1 from '../imgs/arq/diseño_1.jpg';
@@ -99,12 +93,27 @@ export default function Portfolio() {
             );
             default: return (
                 <div className="inner-port-component">
-                    <img src={eventos} alt="eventos" className="img-fluid"/>
-                    <img src={mkt} alt="mkt" className="img-fluid"/>
-                    <img src={ferias} alt="ferias" className="img-fluid"/>
-                    <img src={family} alt="family" className="img-fluid"/>
-                    <img src={merchan} alt="merchan" className="img-fluid"/>
-                    <img src={film} alt="film" className="img-fluid"/>
+                    <img src={btl_1} alt="btl_1" className="img-fluid"/>
+                    <img src={btl_2} alt="btl_2" className="img-fluid"/>
+                    <img src={btl_3} alt="btl_3" className="img-fluid"/>
+                    <img src={btl_4} alt="btl_4" className="img-fluid"/>
+                    <img src={trade_1} alt="trade_1" className="img-fluid"/>
+                    <img src={trade_2} alt="trade_2" className="img-fluid"/>
+                    <img src={trade_3} alt="trade_3" className="img-fluid"/>
+                    <img src={trade_4} alt="trade_4" className="img-fluid"/>
+                    <img src={trade_5} alt="trade_5" className="img-fluid"/>
+                    <img src={diseño_1} alt="diseño_1" className="img-fluid"/>
+                    <img src={diseño_2} alt="diseño_2" className="img-fluid"/>
+                    <img src={diseño_3} alt="diseño_3" className="img-fluid"/>
+                    <img src={prod_1} alt="prod_1" className="img-fluid"/>
+                    <img src={prod_2} alt="prod_2" className="img-fluid"/>
+                    <img src={prod_3} alt="prod_3" className="img-fluid"/>
+                    <img src={prod_4} alt="prod_4" className="img-fluid"/>
+                    <img src={rh1} alt="rh1" className="img-fluid"/>
+                    <img src={rh2} alt="rh2" className="img-fluid"/>
+                    <img src={mkt_1} alt="mkt_1" className="img-fluid"/>
+                    <img src={mkt_2} alt="mkt_2" className="img-fluid"/>
+                    <img src={mkt_3} alt="mkt_3" className="img-fluid"/>
                 </div>
             );
         }

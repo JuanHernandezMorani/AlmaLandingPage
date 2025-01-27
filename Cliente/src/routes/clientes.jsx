@@ -88,15 +88,17 @@ export default function Clientes() {
                 <img src={rhbg} alt="rhbg" className="img-fluid"/>
                 </div>
                 <p className="clients-sc-p"> <Bolder text={"¿ESTÁS LISTO PARA EMBARCARTE\nCON NOSOTROS?"} toBold={["¿","ESTÁS","LISTO","NOSOTROS"]}/></p>
+                <h1 className="clientes-h1-p">PARTNERS</h1>
                 <div className="partners-inner">
-                <h1 className="clientes-h1">PARTNERS</h1>
-                <div className="partners-list">
-                    {[wooprom, graficatucuman, ecofold, root, ecoprint, boomstudio, sapyd].map((partner, index) => (
-                        <div key={index} className="partners-list-img">
-                            <img src={partner} alt={`partner-${index + 1}`} className="img-fluid" />
-                        </div>
-                    ))}
-                </div>
+                    
+                    <div className="partners-list">
+                        {[wooprom, graficatucuman, ecofold, root, ecoprint, boomstudio, sapyd].map((partner, index) => (
+                            <div key={index} className="partners-list-img">
+                            <    img src={partner} alt={`partner-${index + 1}`} className="img-fluid" />
+                            </div>
+                        ))}
+                    </div>
+                    <p>NUESTROS PARTNERS = ALIANZAS ESTRATÉGICAS</p>
                 </div>
                 <Divider variant="middle" sx={{ background: 'darkgrey', height: '0.3vh' }} />
                 <h1 className="clientes-h1-f">CONTACTO</h1>

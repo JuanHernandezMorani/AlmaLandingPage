@@ -42,9 +42,9 @@ export default function Navbar() {
     return (
         <div className="nav-conteiner">
             <div className="nav-container-inner">
-                <a className="navbar-brand" href="/">
+                <div className="navbar-brand">
                     <img src={selectA()} alt="Almabtl_Icon" className="img-fluid" />
-                </a>
+                </div>
                 <ul className="nav-ul">
                     <li className={selectG()}>
                         <a className="nav-link" href="#agency">AGENCIA&#9662;</a>

@@ -29,8 +29,7 @@
 }
 
 .footer-img-conteiner {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 30vw;
 }
 
 .footer-img-conteiner img {
@@ -42,7 +41,6 @@
 .foot-icons-conteiner img{
     max-width: 3.02vw;
     max-height: 3.02vw;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1vw;
     cursor: pointer;
 }

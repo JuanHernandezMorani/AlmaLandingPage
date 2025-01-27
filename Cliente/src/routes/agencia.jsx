@@ -1,6 +1,6 @@
 import React from "react";
 import '../style/agencia.css';
-import sep from '../imgs/others/separador-inicio.png';
+import sep from '../imgs/others/separador.png';
 import Divider from '@mui/material/Divider';
 import creative from '../imgs/others/creative.png';
 import prof from '../imgs/others/prof.png';
@@ -11,7 +11,7 @@ export default function Agencia(){
  return (
         <div className="agency-container">
             <h1 className="agency-title">AGENCIA</h1>
-            <h2>¿Quiénes Somos?</h2>
+            <h2>¿QUIENES SOMOS?</h2>
             <div className="agency-middle">
                 <div className="agency-inner">
                    <h3 className="agency-description">{`Somos una agencia con más de 20 años desarrollando soluciones\ncomerciales y creativas para todo tipo de empresas\ny eventos en Argentina.`}</h3>

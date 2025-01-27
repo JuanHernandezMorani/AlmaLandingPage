@@ -1,10 +1,11 @@
 .nav-conteiner{
     background-color: transparent;
     position: absolute;
-    top: 2vw;
+    top: 1vw;
     left: 12vw;
     margin: 0;
     padding: 0;
+    z-index: 2;
 }
 
 .nav-container-inner {
@@ -54,8 +55,7 @@
 }
 
 .social-conteiner {
-    margin-left: 3vw;
-    margin-right: 1vw;
+    margin-left: 12vw;
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -10,13 +10,13 @@ import rrhh from '../imgs/srv/rrhh.png';
 export default function Servicios(){
 return (
         <div className="services-container">
-            <h1 className="services-title">Servicios</h1>
+            <h1 className="services-title">SERVICIOS</h1>
 
-            <h2>¿Qué y como lo hacemos?</h2>
+            <h2>¿QUÉ Y COMO LO HACEMOS?</h2>
 
             <h3 className="services-description">{"Nuestra motivación es encontrar una idea que transforme, que contagie sensaciones. Resolvemos\ntodos los problemas de forma creativa y eficaz."}</h3>
 
-            <p> {"Disfrutamos de vincularnos con nuestros clientes: somos el brazo ejecutor y creativo que tu empresa necesita.\nTodos los proyectos son bienvenidos: chicos, medianos, grandes, y ¡desde cualquier lugar del país!"}</p>
+            <p>{"Disfrutamos de vincularnos con nuestros clientes: somos el brazo ejecutor y creativo que tu empresa necesita.\nTodos los proyectos son bienvenidos: chicos, medianos, grandes, y ¡desde cualquier lugar del país!"}</p>
 
             <div className="services-components">
                 <div className="component-container">

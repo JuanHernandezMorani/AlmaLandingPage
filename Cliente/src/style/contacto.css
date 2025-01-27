@@ -43,6 +43,7 @@
   .form-textarea {
     border: 1px solid #ccc;
     border-radius: 0.3vw;
+    margin-left: 8vw;
     padding-top: 0.5vw;
     padding-bottom: 0.5vw;
     padding-right: 0.5vw;
@@ -50,7 +51,7 @@
     font-size: 0.96vw;
     font-family: 'Arial', sans-serif;
     text-align: start;
-    width: 50vw;
+    width: 40vw;
     height: 3.88vw;
     box-sizing: border-box;
   }
@@ -69,6 +70,7 @@
   .contact-form-button {
     text-align: center;
     margin-top: 1vw;
+    margin-left: 8vw;
     width: calc(4.8vw + 10px);
     height: calc(2.4vw + 5px);
     aspect-ratio: 1/1;
