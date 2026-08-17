@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { ImageContext } from '../../context/ImageContext.js';
+import { ImageContext } from '../../context/ImageContext.jsx';
 import '../../style/nav.css';
 import logoDark from '../../imgs/log/ALMA_en_negro.png';
 import logoLight from '../../imgs/log/ALMA_en_blanco.png';

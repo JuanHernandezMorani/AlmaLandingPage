@@ -1,6 +1,6 @@
 import React from 'react';
-import { ImageProvider } from './context/ImageContext.js';
-import { PortProvider } from './context/PortContext.js';
+import { ImageProvider } from './context/ImageContext.jsx';
+import { PortProvider } from './context/PortContext.jsx';
 import Navbar from './components/nav/nav.jsx';
 import Footer from './components/footer/footer.jsx';
 import Home from './routes/home.jsx';

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { PortContext } from '../context/PortContext.js';
+import { PortContext } from '../context/PortContext.jsx';
 import '../style/portfolio.css';
 import link from '../imgs/others/separador.png';
 import { Bolder } from '../components/helper/helper.jsx';

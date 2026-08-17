@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 import '../../style/carrusel.css';
-import { ImageContext } from '../../context/ImageContext.js';
-import { PortContext } from '../../context/PortContext.js';
+import { ImageContext } from '../../context/ImageContext.jsx';
+import { PortContext } from '../../context/PortContext.jsx';
 import portada from '../../imgs/port/PORTADA_PRINCIPAL.jpg';
 import eventos from '../../imgs/port/EVENTOS_CORPORATIVOS.jpg';
 import mkt from '../../imgs/port/TRADE_MKT.jpg';
