@@ -1,0 +1,2 @@
+.App { width: 100%; min-height: 100vh; overflow-x: clip; }
+.sections-list > section { scroll-margin-top: 5.5rem; }

@@ -1,65 +1,56 @@
-# Alma LandPage Web Project
+# ALMA BTL Landing Page
 
-A professional and modern landing page created for promotional purposes and programming practice. Built with React and JavaScript, this project also utilizes additional libraries like SweetAlert to enhance user experience.
+Sitio institucional responsive para ALMA BTL. Esta versión conserva la identidad visual, logos, iconos, favicon, contenidos e imágenes del proyecto original y moderniza la implementación sin requerir un backend propio.
 
+## Arquitectura
 
-## Features
+Proyecto **frontend-only** con React + Vite. No requiere Express, Railway, servidor SMTP ni API propia para desplegarse.
 
- - Responsive design for optimal viewing on all devices
- - Interactive alerts and pop-ups powered by SweetAlert.
- - Professional and clean layout tailored for business promotion
+El formulario de contacto utiliza Web3Forms directamente desde el navegador. El access key de Web3Forms está diseñado para uso client-side y no es una credencial secreta.
 
-   ## Getting Started
+## Desarrollo
 
-   Follow these steps to set up and run the project locally:
+Requisitos: Node.js 20.19+.
 
-### Prerequisites
-
- Ensure you have the following installed:
- - Node.js (v14 or newer)
- - NPM (Node Package Manager)
- - React (last version)
- - Visual Studio Code or any other that support front-end code
-
-#### Installation
-
- - First clone this repository to your local machine:
- ``` git
-git clone https://github.com/JuanHernandezMorani/AlmaLandingPage
-```
- - Second navigate to the project directory
-
-``` git
-cd AlmaLandingPage
-```
-   
- - Third install required depencencies
-
-``` git
+```bash
 npm install
+npm run dev
 ```
 
- - Finally run the project
+## Configurar el formulario
 
-``` git
-npm start
+1. Crear un Access Key de Web3Forms para el correo que debe recibir las consultas de ALMA.
+2. Copiar `.env.example` a `.env.local`.
+3. Completar:
+
+```env
+VITE_WEB3FORMS_ACCESS_KEY=TU_ACCESS_KEY
 ```
 
-## Built with
- - React
- - Javascript
- - HTML
- - CSS
- - Sweet Alert
+Para Vercel, crear la misma variable `VITE_WEB3FORMS_ACCESS_KEY` en **Project Settings → Environment Variables** y desplegar normalmente el frontend.
 
+Si el servicio de formularios no está configurado o falla, la interfaz ofrece `info@almabtl.com` como alternativa directa.
 
+## Build
 
-# License
- This project is licensed under MIT License. See the [license](https://github.com/JuanHernandezMorani/AlmaLandingPage/blob/main/LICENSE) file for details.
+```bash
+npm run build
+npm run preview
+```
 
-## Contributing
+## Cambios principales
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/JuanHernandezMorani/AlmaLandingPage/issues) if you want to contribute.
+- Migración de Create React App a Vite.
+- Eliminación de Bootstrap, MUI, React Router y dependencias no utilizadas.
+- Navegación móvil real con menú desplegable.
+- Carrusel simplificado y accesible.
+- Layouts responsive para agencia, servicios, portfolio, clientes, partners, contacto y footer.
+- Portfolio sin alturas rígidas dependientes de `vw`.
+- Formulario con estados reales de envío, errores, honeypot y accesibilidad mejorada.
+- Eliminación completa del backend Express/Nodemailer: el proyecto es desplegable como frontend estático.
+- Sin Railway ni `VITE_CONTACT_API_URL`.
+- Branding de ALMA, iconos y favicon preservados.
 
-## Acknowledgments
- - Inspiration for this project came from the desire to combine professional design with programming skill enhancement.
+## Crédito
+
+Desarrollo web © 2026 Juan Braian Hernández Morani.

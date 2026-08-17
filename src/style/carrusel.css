@@ -1,0 +1,91 @@
+.carrusel-container {
+  position: relative;
+  min-height: clamp(34rem, 54vw, 52rem);
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+}
+.carrusel-background,
+.carrusel-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
+.carrusel-background { object-fit: cover; z-index: -2; }
+.carrusel-shade { z-index: -1; background: linear-gradient(90deg, transparent 36%, rgba(0,0,0,.08)); pointer-events: none; }
+.carrusel-main-img,
+.carrusel-project {
+  position: absolute;
+  right: clamp(2rem, 7vw, 8rem);
+  bottom: clamp(5rem, 9vw, 9rem);
+  max-width: min(48rem, 58vw);
+  text-align: right;
+}
+.carrusel-main-img p {
+  margin: 0 0 .25rem;
+  color: #fff;
+  font-size: clamp(1.4rem, 2.1vw, 2.4rem);
+  line-height: 1.05;
+  font-weight: 400;
+}
+.carrusel-main-img h1 {
+  margin: 0;
+  color: #111;
+  font-size: clamp(2rem, 3.25vw, 4rem);
+  line-height: 1.05;
+  font-weight: 400;
+}
+.carrusel-project { color: #fff; }
+.carrusel-project h1 {
+  margin: 0 0 1.35rem;
+  white-space: pre-line;
+  font-size: clamp(2.4rem, 4.3vw, 5rem);
+  line-height: .98;
+  font-weight: 400;
+  text-shadow: 0 2px 24px rgba(0,0,0,.24);
+}
+.project_button {
+  min-width: clamp(10rem, 16vw, 15rem);
+  min-height: 3.1rem;
+  padding: .75rem 1.25rem;
+  border: 1px solid rgba(255,255,255,.9);
+  color: #fff;
+  background: rgba(0,0,0,.08);
+  letter-spacing: .04em;
+}
+.project_button:hover { background: rgba(255,255,255,.16); }
+.navigation {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5rem;
+  width: min(38rem, calc(100% - 2rem));
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: .5rem;
+}
+.nav-dot {
+  height: .28rem;
+  padding: 0;
+  border: 0;
+  background: rgba(255,255,255,.5);
+}
+.nav-dot.active { background: #fff; }
+
+@media (max-width: 820px) {
+  .carrusel-container { min-height: 42rem; }
+  .carrusel-background { object-position: center; }
+  .carrusel-shade { background: linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.42)); }
+  .carrusel-main-img,
+  .carrusel-project {
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 5rem;
+    max-width: none;
+    text-align: left;
+  }
+  .carrusel-main-img h1 { color: #fff; font-size: clamp(2.25rem, 10vw, 3.6rem); }
+  .carrusel-main-img p { font-size: 1.35rem; }
+  .carrusel-project h1 { font-size: clamp(2.6rem, 11vw, 4.5rem); }
+  .project_button { width: min(100%, 14rem); }
+}
+@media (max-width: 440px) {
+  .carrusel-container { min-height: 38rem; }
+  .navigation { bottom: 1rem; gap: .3rem; }
+}

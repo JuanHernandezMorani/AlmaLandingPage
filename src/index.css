@@ -1,0 +1,44 @@
+:root {
+  font-family: Montserrat, "Segoe UI", Arial, sans-serif;
+  color: #111;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --alma-wine: #790b39;
+  --alma-beige: #cbc5bb;
+  --alma-soft: #f5f5f5;
+  --page-inline: clamp(1rem, 5vw, 7.5rem);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; overflow-x: clip; }
+body { margin: 0; min-width: 280px; overflow-x: clip; background: #fff; color: #111; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; }
+img { max-width: 100%; }
+.img-fluid { max-width: 100%; height: auto; }
+.bold-word { font-weight: 700; }
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.section-divider {
+  width: min(calc(100% - 2rem), 86rem);
+  height: 1px;
+  border: 0;
+  margin: 0 auto;
+  background: #b9b9b9;
+}
+:focus-visible { outline: 3px solid rgba(121, 11, 57, 0.42); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
