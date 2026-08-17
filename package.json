@@ -1,6 +1,6 @@
 {
   "name": "alma-landing-page",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "private": true,
   "type": "module",
   "description": "Responsive ALMA BTL agency landing page, deployable as a frontend-only Vite application.",
